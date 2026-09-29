@@ -1,0 +1,84 @@
+/* =========================================================================
+   SEND BUTTON - FLYING AIRPLANE INTERACTION
+   Color: Crimson #D41414 to match portfolio theme
+   ========================================================================= */
+
+.send-btn-wrapper {
+  display: inline-flex;
+  width: auto;
+}
+
+.send-btn-wrapper .send-airplane-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border-radius: 25px;
+  background: #D41414;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 24px;
+  height: 48px;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+  box-shadow: none;
+}
+
+.send-btn-wrapper .send-airplane-btn:active {
+  transform: scale(0.95);
+}
+
+/* SVG wrapper layers for the float animation */
+.send-btn-wrapper .send-airplane-btn .svg-wrapper-1 {
+  display: flex;
+  align-items: center;
+}
+
+.send-btn-wrapper .send-airplane-btn .svg-wrapper {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.send-btn-wrapper .send-airplane-btn svg {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+  flex-shrink: 0;
+}
+
+.send-btn-wrapper .send-airplane-btn .btn-text-content {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Hover Interactions ── */
+.send-btn-wrapper .send-airplane-btn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.send-btn-wrapper .send-airplane-btn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.send-btn-wrapper .send-airplane-btn:hover .btn-text-content {
+  transform: translateX(5em);
+}
+
+/* ── Float animation ── */
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}

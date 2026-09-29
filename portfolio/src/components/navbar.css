@@ -1,0 +1,174 @@
+/* ==============================
+   NAVBAR - LUXURY BLACK & CRIMSON
+   ============================== */
+
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1440px;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+/* ==============================
+   LOGO / NAME
+   ============================== */
+.logo {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  user-select: none;
+  font-family: 'Syne', 'Inter', sans-serif;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+/* ==============================
+   DESKTOP NAVIGATION LAYOUT (LEFT / CENTER / RIGHT)
+   ============================== */
+.nav-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nav-center a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  letter-spacing: 0.02em;
+}
+
+.nav-center a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #000000;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+
+.nav-center a:hover,
+.nav-center a.active-link {
+  opacity: 1;
+  color: #000000;
+  transform: translateY(-1px);
+}
+
+.nav-center a:hover::after,
+.nav-center a.active-link::after {
+  width: 100%;
+}
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* =========================================================================
+   BLACK / DARK SUBPAGES THEME (Buttons and Logo in Red #D41414)
+   ========================================================================= */
+.navbar-dark-theme .logo {
+  color: #D41414;
+}
+
+.navbar-dark-theme .nav-center a {
+  color: #D41414;
+  opacity: 0.9;
+}
+
+.navbar-dark-theme .nav-center a::after {
+  background: #D41414;
+}
+
+.navbar-dark-theme .nav-center a:hover,
+.navbar-dark-theme .nav-center a.active-link {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.navbar-dark-theme .nav-center a.active-link::after {
+  background: #D41414;
+}
+
+/* ==============================
+   MOBILE OVERLAY WRAPPER
+   ============================== */
+.mobile-overlay-wrapper {
+  display: none;
+}
+
+/* ==============================
+   📱 RESPONSIVE (MOBILE SCREENS <= 768px)
+   ============================== */
+@media (max-width: 768px) {
+  .mobile-overlay-wrapper {
+    display: block;
+  }
+
+  .navbar {
+    padding: 14px 18px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    width: 100%;
+  }
+
+  .nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    font-size: clamp(17px, 4.8vw, 21px);
+    white-space: nowrap;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+}

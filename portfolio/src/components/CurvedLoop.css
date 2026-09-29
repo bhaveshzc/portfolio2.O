@@ -1,0 +1,49 @@
+/* =============================================================
+   CURVED LOOP (REACT BITS COMPONENT)
+   Infinite smooth SVG textPath curved marquee loop
+   ============================================================= */
+
+.curved-loop-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.curved-loop-container.is-interactive {
+  cursor: grab;
+}
+
+.curved-loop-container.is-interactive:active {
+  cursor: grabbing;
+}
+
+.curved-loop-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  overflow: visible;
+  display: block;
+}
+
+.curved-loop-text {
+  /* React Bits authentic font styling */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .curved-loop-text {
+    font-size: 26px;
+    letter-spacing: 3.5px;
+  }
+}

@@ -1,0 +1,120 @@
+/* =========================================================================
+   SKILLS & TECH STACK SECTION - LUXURY BLACK & CRIMSON
+   ========================================================================= */
+
+.skills-luxury-section {
+  position: relative;
+  width: 100%;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  padding: 100px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-luxury-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.skills-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.skill-category-card {
+  padding: 34px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* Match homepage bento card gradient */
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.category-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(179, 0, 0, 0.12);
+  border: 1px solid rgba(179, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B30000;
+  flex-shrink: 0;
+}
+
+.category-name {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #F5F5F5;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.skills-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-item-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #F5F5F5;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-pill-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.skill-item-pill:hover {
+  background: rgba(179, 0, 0, 0.14);
+  border-color: #B30000;
+  transform: translateY(-2px);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(179, 0, 0, 0.25);
+}
+
+@media (max-width: 900px) {
+  .skills-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category-card {
+    padding: 26px 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-luxury-section {
+    padding: 60px 0;
+  }
+}

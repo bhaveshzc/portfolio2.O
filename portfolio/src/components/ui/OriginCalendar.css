@@ -1,0 +1,26 @@
+/* =========================================================================
+   CAL.COM INLINE EMBED — Direct booking calendar
+   ========================================================================= */
+
+.cal-inline-embed-wrapper {
+  width: 100%;
+  min-height: 540px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111111;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .cal-inline-embed-wrapper {
+    min-height: 480px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cal-inline-embed-wrapper {
+    min-height: 440px;
+    border-radius: 10px;
+  }
+}

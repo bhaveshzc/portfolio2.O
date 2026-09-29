@@ -1,0 +1,142 @@
+:root {
+  --bg-primary: #0A0A0A;
+  --bg-surface: #121212;
+  --card-glass: rgba(22, 22, 22, 0.72);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-red: #B30000;
+  --bright-red-hover: #D41414;
+  --text-primary: #F5F5F5;
+  --text-secondary: #9A9A9A;
+  --font-heading: 'Syne', 'Bebas Neue', 'Inter', sans-serif;
+  --font-script: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "LTAvocado";
+  src: url("./assets/fonts/LTAvocado/LTAvocado-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LTAvocado";
+  src: url("./assets/fonts/LTAvocado/LTAvocado-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gervind-demo";
+  src: url("./assets/fonts/gervind-demo/GervindDEMO-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gervind-demo";
+  src: url("./assets/fonts/gervind-demo/GervindDEMO-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Prospect";
+  src: url("./assets/fonts/prospect/Prospect.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "salty-sans";
+  src: url("./assets/fonts/salty-sans/SaltySans.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "soulstice-brush-script-demo";
+  src: url("./assets/fonts/soulstice-brush-script-demo/Soulstice Brush Script Demo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "striker";
+  src: url("./assets/fonts/striker/Striker PersonalUseOnly.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OkayA-Uncut-W00-Regular";
+  src: url("./assets/fonts/OkayA-Uncut-W00-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "bierika";
+  src: url("./assets/fonts/bierika.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Korvich-slam";
+  src: url("./assets/fonts/Korvich-Slam.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dirtyline 36daysoftype 2022";
+  src: url("./assets/fonts/Dirtyline36Daysoftype2022/woff/Dirtyline 36daysoftype 2022.woff2") format("woff2"),
+       url("./assets/fonts/Dirtyline36Daysoftype2022/woff/Dirtyline 36daysoftype 2022.woff") format("woff"),
+       url("./assets/fonts/Dirtyline36Daysoftype2022/Dirtyline 36daysoftype 2022.otf") format("opentype"),
+       url("./assets/fonts/Dirtyline36Daysoftype2022/woff/Dirtyline 36daysoftype 2022.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+/* Hero styles are modularized in src/components/hero.css */

@@ -1,0 +1,336 @@
+/* ==============================
+   HERO SCROLL-DRIVEN ANIMATION
+   Multi-stage cinematic scroll:
+   Stage 1: Avatar rises & Full-Stack moves up
+   Stage 2: Design. (Left) & Develop. (Right) slide in
+   Stage 3: Secure. (Left) & Launch. (Right) slide in
+   ============================== */
+
+.hero-scroll-container {
+  position: relative;
+  width: 100%;
+  height: 320vh;
+  /* Extended scroll track distance for the multi-stage animation sequence */
+  background: #9A0002;
+}
+
+.hero-sticky-frame {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #9A0002;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------
+   LAYER 1 (Deepest Background / z-index: 1): Full-Stack
+   Moves smoothly upward on scroll
+   ------------------------------------------------------------- */
+.hero-fullstack-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  /* BEHIND Image */
+  pointer-events: none;
+  will-change: transform;
+}
+
+.Full-Stak {
+  font-family: "soulstice-brush-script-demo", "Alex Brush", "Dancing Script", "Cormorant Garamond", cursive, serif;
+  font-size: clamp(42px, 7.5vw, 85px);
+  letter-spacing: 5px;
+  color: #000000;
+  display: inline-block;
+  margin-bottom: 130px;
+  /* Positions Full-Stack clearly above DEVELOPER */
+  user-select: none;
+}
+
+/* -------------------------------------------------------------
+   LAYER 2 (Middle / z-index: 2): Hero Image
+   Rises from below, sitting in front of Full-Stack and behind DEVELOPER
+   ------------------------------------------------------------- */
+.hero-image-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+  /* BETWEEN Full-Stack and DEVELOPER */
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.hero-image-layer img {
+  max-height: 85vh;
+  max-width: 85vw;
+  width: auto;
+  object-fit: contain;
+  transform-origin: bottom center;
+  transform: translateX(25px);
+  /* 👈 ADJUST IMAGE X POSITION HERE */
+}
+
+/* -------------------------------------------------------------
+   LAYER 2.5 (z-index: 4): Floating Words (Design, Develop, Secure, Launch)
+   Slides in flanking the head & upper body of the avatar
+   ------------------------------------------------------------- */
+.hero-words-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-words-container {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hero-word-slot {
+  position: relative;
+  width: 320px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 120px;
+  /* Aligns vertically with the upper face/chest space flanking the avatar */
+}
+
+.slot-left {
+  justify-content: flex-start;
+}
+
+.slot-right {
+  justify-content: flex-end;
+}
+
+.hero-word-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  will-change: transform, opacity;
+  user-select: none;
+}
+
+.slot-left .hero-word-card {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.slot-right .hero-word-card {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.hero-word-number {
+  font-family: 'Inter Variable', monospace, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(0, 0, 0, 0.65);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+.hero-word-main {
+  font-family: "LTAvocado", "Inter Variable", sans-serif;
+  font-size: clamp(2.4rem, 4.4vw, 4.6rem);
+  font-weight: 900;
+  color: #000000;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.hero-word-dot {
+  color: #000000;
+  opacity: 0.85;
+}
+
+/* -------------------------------------------------------------
+   LAYER 3 (Foreground / z-index: 3): DEVELOPER
+   Fixed in the vertical center of the hero frame
+   ------------------------------------------------------------- */
+.hero-developer-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  /* IN FRONT OF Image */
+  pointer-events: none;
+  padding: 0 20px;
+}
+
+.developer-pressure-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  /* Allows TextPressure / CurvedLoop interaction */
+  transform: translateY(180px);
+  /* 👈 Shifts DEVELOPER downwards */
+}
+
+/* =============================================================
+   📱 MOBILE DEVELOPER CURVED LOOP WRAPPER (REACT BITS)
+   ============================================================= */
+.hero-developer-mobile-curved {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  pointer-events: auto;
+  transform: translate(0px, 100px);
+}
+
+/* -------------------------------------------------------------
+   RESPONSIVE ADJUSTMENTS (TABLETS & PHONES)
+   ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-word-slot {
+    width: 240px;
+    margin-bottom: 100px;
+  }
+
+  .hero-word-main {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-scroll-container {
+    height: 55dvh;
+  }
+
+  .hero-sticky-frame {
+    height: 55dvh;
+    position: relative;
+  }
+
+  /* 📱 "Full-Stack" font size for Tablets & Mobile */
+  .hero-fullstack-layer {
+    align-items: flex-end;
+    padding-bottom: 295px;
+  }
+
+  .Full-Stak {
+    font-size: clamp(36px, 9vw, 58px);
+    letter-spacing: 3px;
+    margin-bottom: 0;
+  }
+
+  .developer-pressure-wrapper {
+    height: 160px;
+    transform: translateY(10px);
+  }
+
+  .hero-image-layer {
+    align-items: flex-start;
+    padding-top: 90px;
+  }
+
+  .hero-image-layer img {
+    max-height: 49dvh;
+    max-width: 100vw;
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+
+  .hero-words-container {
+    padding: 0 16px;
+  }
+
+  .hero-word-slot {
+    width: 160px;
+    margin-bottom: 140px;
+  }
+
+  .hero-word-main {
+    font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+  }
+
+  .hero-word-number {
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-scroll-container {
+    height: 55dvh;
+  }
+
+  /* 📱 "Full-Stack" font size for Mobile Phones */
+  .Full-Stak {
+    font-size: clamp(40px, 11vw, 62px);
+    letter-spacing: 2.5px;
+    margin-bottom: 0;
+  }
+
+  .developer-pressure-wrapper {
+    height: 140px;
+    transform: translateY(0);
+  }
+
+  .hero-image-layer img {
+    max-height: 45dvh;
+    max-width: 1000vw;
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+
+  .hero-word-slot {
+    width: 130px;
+    margin-bottom: 160px;
+  }
+
+  .hero-word-main {
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
+  }
+}

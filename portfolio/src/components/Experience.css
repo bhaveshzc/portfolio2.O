@@ -1,0 +1,493 @@
+/* =========================================================================
+   EXPERIENCE & TIMELINE SECTION - LUXURY BLACK & CRIMSON
+   ========================================================================= */
+
+.experience-luxury-section {
+  position: relative;
+  width: 100%;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  padding: 80px 0 100px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-luxury-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-header-left {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  /* Align with timeline-wrapper */
+  margin: 0 auto;
+}
+
+.timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.timeline-node-item {
+  display: flex;
+  gap: 28px;
+  position: relative;
+}
+
+.timeline-marker-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  flex-shrink: 0;
+  padding-top: 0;
+  justify-content: flex-start;
+  padding-top: 22px;
+  /* vertically centers dot with smaller card header */
+}
+
+.timeline-dot-crimson {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #B30000;
+  border: 3px solid #0A0A0A;
+  box-shadow: 0 0 12px rgba(179, 0, 0, 0.6);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.timeline-line-stem {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(180deg, rgba(179, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
+  margin-top: 6px;
+}
+
+.timeline-node-item:last-child .timeline-line-stem {
+  display: none;
+}
+
+.timeline-card-content {
+  flex: 1;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 32px !important;
+  /* Match homepage bento card gradient */
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-period-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #B30000;
+  background: rgba(179, 0, 0, 0.1);
+  border: 1px solid rgba(179, 0, 0, 0.3);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.timeline-location-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #9A9A9A;
+}
+
+.timeline-role-title {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #F5F5F5;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Organization Brand Row with Logo Badge */
+.org-brand-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0;
+}
+
+.org-logo-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.org-logo-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.org-logo-link:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: #D41414;
+  box-shadow: 0 4px 14px rgba(212, 20, 20, 0.35);
+}
+
+.org-logo-box-square {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.org-logo-box-rect {
+  height: 42px;
+  width: auto;
+  max-width: 130px;
+  border-radius: 10px;
+  padding: 4px 10px;
+}
+
+.org-logo-img-square {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+.org-logo-img-rect {
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.timeline-org-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #D41414;
+  margin: 0;
+}
+
+.timeline-desc-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #9A9A9A;
+  margin: 4px 0 0 0;
+}
+
+.timeline-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.timeline-tech-pill {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #F5F5F5;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+@media (max-width: 768px) {
+  .experience-luxury-section {
+    padding: 60px 0 50px 0;
+  }
+
+  .experience-luxury-container {
+    padding: 0 16px;
+    gap: 36px;
+  }
+
+  .timeline-node-item {
+    gap: 16px;
+  }
+
+  .timeline-card-content {
+    padding: 24px 20px;
+  }
+
+  .timeline-role-title {
+    font-size: clamp(18px, 5vw, 22px);
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-luxury-section {
+    padding: 48px 0 40px 0;
+  }
+
+  .experience-luxury-container {
+    padding: 0 12px;
+    gap: 28px;
+  }
+
+  .timeline-node-item {
+    gap: 10px;
+  }
+
+  .timeline-marker-col {
+    width: 16px;
+    padding-top: 6px;
+  }
+
+  .timeline-dot-crimson {
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+  }
+
+  .timeline-card-content {
+    padding: 18px 14px;
+    border-radius: 16px;
+    gap: 8px;
+  }
+
+  .timeline-card-header {
+    gap: 6px;
+  }
+
+  .timeline-period-badge {
+    font-size: 10.5px;
+    padding: 3px 10px;
+  }
+
+  .timeline-location-text {
+    font-size: 12px;
+  }
+
+  .timeline-role-title {
+    font-size: clamp(16px, 4.6vw, 19px);
+  }
+
+  .org-brand-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .org-logo-box-square {
+    width: 34px;
+    height: 34px;
+  }
+
+  .org-logo-box-rect {
+    height: 34px;
+    max-width: 100px;
+  }
+
+  .timeline-org-name {
+    font-size: 13.5px;
+  }
+
+  .timeline-desc-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .timeline-tech-pill {
+    font-size: 10.5px;
+    padding: 3px 8px;
+  }
+}
+
+/* =========================================================================
+   BOTTOM CARDS (Let's Work Together & My Work)
+   ========================================================================= */
+.bottom-boxes-wrapper {
+  margin-top: 60px;
+}
+
+.experience-bottom-cards {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 24px;
+  width: 100%;
+  flex: 1; /* Takes up the rest of the flex space alongside the marker column */
+}
+
+.exp-action-card {
+  padding: 38px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 220px;
+  cursor: pointer;
+  border-radius: 18px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-action-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Texture overlay for Contact Card */
+.exp-card-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-conic-gradient(rgba(255, 255, 255, 0.012) 0% 25%, transparent 0% 50%) 0 0 / 3px 3px;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.exp-gradient-card-title {
+  position: relative;
+  z-index: 1;
+  font-family: 'Syne', 'Bebas Neue', 'Inter', sans-serif;
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 700;
+  color: #F5F5F5;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.exp-red-accent {
+  color: #D41414;
+}
+
+.exp-script-title {
+  font-family: "soulstice-brush-script-demo", "Alex Brush", "Dancing Script", "Cormorant Garamond", cursive, serif;
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 400;
+  color: #D41414;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: left;
+  width: 100%;
+  margin-left: -15px;
+  /* Moves it left (X-axis). Use positive to move right. */
+  margin-top: -15px;
+  /* Moves it up (Y-axis). Use positive to move down. */
+
+}
+
+.exp-card-action-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.exp-action-tag-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.exp-action-category-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #9A9A9A;
+  text-transform: uppercase;
+}
+
+.exp-action-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #F5F5F5;
+}
+
+@media (max-width: 768px) {
+  .bottom-boxes-wrapper { margin-top: 40px; }
+}
+
+@media (max-width: 480px) {
+  .bottom-boxes-wrapper { margin-top: 28px; }
+}
+
+@media (max-width: 900px) {
+  .experience-bottom-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .exp-action-card {
+    padding: 26px 20px;
+    min-height: 180px;
+  }
+
+  .exp-gradient-card-title {
+    font-size: clamp(32px, 7.5vw, 44px);
+  }
+
+  .exp-script-title {
+    font-size: clamp(34px, 8vw, 48px);
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-action-card {
+    padding: 22px 16px;
+    min-height: 160px;
+    border-radius: 16px;
+  }
+
+  .exp-gradient-card-title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .exp-script-title {
+    font-size: clamp(30px, 8.5vw, 40px);
+  }
+
+  .exp-action-subtitle {
+    font-size: 14.5px;
+  }
+}

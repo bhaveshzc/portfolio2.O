@@ -1,0 +1,617 @@
+/* =========================================================================
+   CONTACT PAGE STYLES (Solid Modern Dark & Glass Aesthetic)
+   ========================================================================= */
+
+.contact-clean-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  box-sizing: border-box;
+  padding-bottom: 0;
+}
+
+.contact-clean-wrapper {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================================================================
+   1. TOP BADGES: PROFILE PILL + SOCIAL SQUARE ICONS (SOLID BORDERS)
+   ========================================================================= */
+.contact-top-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.profile-identity-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 6px 14px 6px 8px;
+}
+
+.profile-avatar-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #222222;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.profile-name-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.profile-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.profile-verified-badge {
+  font-size: 11px;
+  color: #D41414;
+}
+
+.profile-handle {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  color: #777777;
+}
+
+.connect-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #242424;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+}
+
+.connect-action-pill:hover {
+  background: #333333;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Social Icon Square Buttons */
+.social-icon-bubbles-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-icon-bubble-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-icon-bubble-btn svg {
+  transition: color 0.2s ease, fill 0.2s ease;
+}
+
+.social-icon-bubble-btn:hover {
+  background: #222222;
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #D41414;
+  transform: translateY(-2px);
+}
+
+.social-icon-bubble-btn:hover svg {
+  color: #D41414;
+  fill: currentColor;
+}
+
+
+/* =========================================================================
+   2. SIMPLE & SMALL EMAIL CAPSULE (SOLID BORDER)
+   ========================================================================= */
+.contact-email-capsule-row {
+  display: flex;
+  justify-content: center;
+}
+
+.clean-email-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.capsule-copy-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #A3A3A3;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: color 0.2s ease;
+}
+
+.capsule-copy-trigger:hover {
+  color: #FFFFFF;
+}
+
+.capsule-email-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.capsule-copied-hint {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #22C55E;
+}
+
+.capsule-ext-link {
+  color: #666666;
+  display: inline-flex;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.capsule-ext-link:hover {
+  color: #D41414;
+}
+
+
+/* =========================================================================
+   3. CLEAN SWITCHER (GLASS CAPSULE & SLIDING INDICATOR)
+   ========================================================================= */
+.clean-switcher-center-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.clean-switcher-capsule {
+  position: relative;
+  display: inline-flex;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.switcher-slider-bg {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%), #222222;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 4px 14px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.switcher-slider-bg.slide-left {
+  transform: translateX(0%);
+}
+
+.switcher-slider-bg.slide-right {
+  transform: translateX(100%);
+}
+
+.switcher-pill-btn {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 22px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  color: #888888;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  outline: none;
+  white-space: nowrap;
+}
+
+.switcher-pill-btn:hover {
+  color: #DDDDDD;
+}
+
+.switcher-pill-btn.is-active {
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  box-shadow: none !important;
+}
+
+
+/* =========================================================================
+   4. TAB 1: MESSAGE CARD
+   ========================================================================= */
+.clean-tab-pane {
+  width: 100%;
+  animation: paneIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes paneIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.clean-message-card {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 38px 32px 32px;
+  box-sizing: border-box;
+}
+
+.conversation-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  margin: 0 0 28px 0;
+}
+
+.text-crimson-accent {
+  color: #D41414;
+  font-weight: 400;
+}
+
+/* Form */
+.conversation-clean-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.conversation-input-box {
+  position: relative;
+  width: 100%;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.conversation-input-box:focus-within {
+  border-color: #D41414;
+  background: #1C1C1C;
+}
+
+.conversation-input-box input,
+.conversation-input-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  padding: 14px 18px;
+  color: #D41414;
+  caret-color: #D41414;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+}
+
+.conversation-input-box input::placeholder,
+.conversation-input-box textarea::placeholder {
+  color: #777777;
+  font-weight: 400;
+}
+
+/* Fix for webkit autofill turning background white */
+.conversation-input-box input:-webkit-autofill,
+.conversation-input-box input:-webkit-autofill:hover, 
+.conversation-input-box input:-webkit-autofill:focus, 
+.conversation-input-box input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #181818 inset !important;
+  -webkit-text-fill-color: #D41414 !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #D41414;
+}
+
+.conversation-input-box:focus-within input:-webkit-autofill,
+.conversation-input-box:focus-within input:-webkit-autofill:hover,
+.conversation-input-box:focus-within input:-webkit-autofill:focus,
+.conversation-input-box:focus-within input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #1C1C1C inset !important;
+}
+
+.textarea-box {
+  min-height: 140px;
+}
+
+.textarea-box textarea {
+  resize: vertical;
+}
+
+.field-error-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #D41414;
+  margin-top: -8px;
+  margin-bottom: 2px;
+  padding-left: 4px;
+}
+
+/* Submit row */
+.conversation-submit-row {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.conversation-submit-row .send-btn-wrapper {
+  width: auto;
+}
+
+.conversation-submit-row .send-slide-btn {
+  min-width: 160px;
+  height: 46px;
+}
+
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 640px) {
+  .contact-clean-wrapper {
+    padding: 16px 14px;
+    gap: 16px;
+  }
+
+  .contact-top-badges-row {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .profile-identity-pill {
+    width: 100%;
+    justify-content: space-between;
+    padding: 6px 10px;
+  }
+
+  .social-icon-bubbles-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .clean-message-card {
+    padding: 24px 16px 20px;
+    border-radius: 16px;
+  }
+
+  .conversation-card-title {
+    font-size: clamp(22px, 6vw, 28px);
+    margin-bottom: 20px;
+  }
+
+  .clean-switcher-capsule {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .switcher-pill-btn {
+    flex: 1;
+    padding: 7px 10px;
+    font-size: clamp(11.5px, 3.2vw, 13px);
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-clean-wrapper {
+    padding: 12px 10px;
+    gap: 14px;
+  }
+
+  .profile-identity-pill {
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 10px 6px 6px;
+    border-radius: 999px !important;
+  }
+
+  .connect-action-pill {
+    margin-left: 0;
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .social-icon-bubble-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .clean-email-capsule {
+    padding: 6px 10px;
+    gap: 6px;
+    max-width: 100%;
+  }
+
+  .capsule-email-text {
+    font-size: clamp(11px, 3.2vw, 12.5px);
+  }
+
+  .clean-message-card {
+    padding: 20px 12px 16px;
+    border-radius: 14px;
+  }
+
+  .conversation-input-box input,
+  .conversation-input-box textarea {
+    padding: 11px 12px;
+    font-size: 13.5px;
+  }
+
+  .conversation-submit-row,
+  .conversation-submit-row .send-btn-wrapper,
+  .conversation-submit-row .send-slide-btn,
+  .conversation-submit-row .send-airplane-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* =========================================================================
+   TOAST NOTIFICATION
+   ========================================================================= */
+.contact-toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  max-width: 340px;
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-toast--success {
+  background: rgba(20, 30, 20, 0.92);
+  border-color: rgba(34, 197, 94, 0.35);
+  color: #d4f5de;
+}
+
+.contact-toast--error {
+  background: rgba(30, 10, 10, 0.92);
+  border-color: rgba(212, 20, 20, 0.4);
+  color: #ffd4d4;
+}
+
+.contact-toast__icon {
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contact-toast--success .contact-toast__icon { color: #22C55E; }
+.contact-toast--error   .contact-toast__icon { color: #D41414; }
+
+.contact-toast__msg {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.contact-toast__close {
+  background: transparent;
+  border: none;
+  color: inherit;
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  flex-shrink: 0;
+  transition: opacity 0.15s ease;
+}
+
+.contact-toast__close:hover { opacity: 1; }
+
+@keyframes toastSlideIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 480px) {
+  .contact-toast {
+    bottom: 16px;
+    right: 12px;
+    left: 12px;
+    max-width: none;
+    font-size: 13px;
+  }
+}

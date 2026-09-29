@@ -1,0 +1,6 @@
+{
+  "mode": "interactive",
+  "workflow": "mobile-responsiveness",
+  "version": "1.0.0",
+  "framework": "vite-react-tailwind"
+}

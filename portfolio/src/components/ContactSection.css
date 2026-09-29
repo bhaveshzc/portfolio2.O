@@ -1,0 +1,105 @@
+/* =========================================================================
+   CONTACT SECTION (Homepage - Header Only Version)
+   ========================================================================= */
+
+.contact-luxury-section {
+  position: relative;
+  width: 100%;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  padding: 80px 0 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-luxury-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ── Section Header ── */
+.section-header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.section-micro-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #9A9A9A;
+  text-transform: uppercase;
+}
+
+.section-script-subtitle {
+  font-family: "soulstice-brush-script-demo", "Alex Brush", "Dancing Script", cursive;
+  font-size: clamp(38px, 4vw, 56px);
+  font-weight: 400;
+  color: #D41414;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.section-main-heading {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 700;
+  color: #F5F5F5;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* ── Contact CTA Pill ── */
+.contact-cta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #D41414;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-cta-pill:hover {
+  background: #b50000;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .contact-luxury-section {
+    padding: 50px 0 40px;
+  }
+
+  .contact-luxury-container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-luxury-container {
+    padding: 0 12px;
+  }
+}

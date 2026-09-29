@@ -1,0 +1,35 @@
+this is the particle font text code u can add this in the same format:
+
+
+<ParticleText
+                        className="developer-particles"
+                        text="DEVELOPER"
+                        particleSize={2.8}
+                        density={5}
+                        color="#0f0f0f"
+                        highlightColor="#0c0c0b"
+                        scatter={150}
+                        gatherDuration={1400}
+                        stagger={200}
+                        pointerRepel={60}
+                        repelRadius={100}
+                        idleDrift={0.5}
+                        trigger="mount"
+                        fontSize={200}
+                        fontWeight={900}
+                        fontFamily="'Inter Variable', system-ui, -apple-system, sans-serif"
+                        glow={false}
+                    />
+
+                    this is the css file:
+
+                    .developer-particles {
+      
+      width: 100%;
+      max-width: 800px;
+      height: 220px;
+      min-height: 180px;
+      align-items: center;
+      transform: translateX(200px) translateY(-150px);
+      
+    }

@@ -1,0 +1,548 @@
+/* =========================================================================
+   ABOUT ME SECTION – LUXURY BLACK & CRIMSON  (matches homepage card style)
+   ========================================================================= */
+
+.about-luxury-section {
+  position: relative;
+  width: 100%;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  padding: 100px 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.about-luxury-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Section Header */
+.section-header-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.section-main-heading {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 700;
+  color: #F5F5F5;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* =========================================================================
+   ICON TAG (shared)
+   ========================================================================= */
+.about-card-icon-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #B30000;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+}
+
+/* =========================================================================
+   STORY CARD – FULL WIDTH (Image left + text right on desktop)
+   ========================================================================= */
+.about-story-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 16px !important;
+  /* Exact homepage bento card gradient */
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Left: Text column */
+.about-story-text-col {
+  flex: 1;
+  padding: 44px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* Right: Image column */
+.about-story-image-col {
+  width: 320px;
+  flex-shrink: 0;
+  position: relative;
+  background: linear-gradient(160deg,
+      rgba(10, 10, 10, 0.6) 0%,
+      rgba(6, 6, 6, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-profile-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.about-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.2) 8%,
+      black 22%,
+      black 82%,
+      transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.2) 8%,
+      black 22%,
+      black 82%,
+      transparent 100%);
+}
+
+/* ── Floating badge & stat row – removed, no styles needed ── */
+
+
+/* ── Card Title ── */
+.about-card-title {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 700;
+  color: #F5F5F5;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.about-title-accent {
+  color: #B30000;
+}
+
+/* ── Card Body Paragraphs ── */
+.about-card-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #9A9A9A;
+  margin: 0 0 14px 0;
+}
+
+.about-card-body:last-of-type {
+  margin-bottom: 28px;
+}
+
+.about-card-body strong {
+  color: #D4D4D4;
+  font-weight: 600;
+}
+
+/* ── Stat Row ── */
+.about-stat-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.about-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.about-stat-number {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #F5F5F5;
+  letter-spacing: -0.02em;
+}
+
+.about-stat-accent {
+  color: #B30000;
+}
+
+.about-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #5A5A5A;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.about-ui-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #3A3A3A;
+  font-size: 12px;
+}
+
+.about-ui-col--addictive .about-ui-list li {
+  color: #C8C8C8;
+}
+
+.about-ui-col--addictive .about-ui-list li::before {
+  color: #B30000;
+}
+
+/* =========================================================================
+   TWO-COLUMN CARD GRID (Row 2)
+   ========================================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch; /* Aligns them perfectly when closed */
+}
+
+.about-grid.is-expanded {
+  align-items: flex-start; /* Stops left box from stretching when right box opens */
+}
+
+.about-card {
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 16px !important;
+  /* No min-height — shrinks to content */
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-card--philosophy {
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.about-card--principles {
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+
+
+/* ── Tag pills – premium with icon support ── */
+.about-card-cta-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.about-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(179, 0, 0, 0.10) 0%, rgba(100, 0, 0, 0.06) 100%);
+  border: 1px solid rgba(179, 0, 0, 0.28);
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #C84040;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.about-tag-pill:hover {
+  background: linear-gradient(135deg, rgba(179, 0, 0, 0.18) 0%, rgba(100, 0, 0, 0.12) 100%);
+  border-color: rgba(179, 0, 0, 0.5);
+  color: #E05050;
+}
+
+.about-tag-pill svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* ── Principles list ── */
+.about-principles-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-principles-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #9A9A9A;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-principles-list strong {
+  color: #E0E0E0;
+  font-weight: 600;
+}
+
+.principle-bullet {
+  color: #B30000;
+  flex-shrink: 0;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* Collapsible extra principles wrapper */
+.principles-extra-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principles-extra-wrapper.is-expanded {
+  max-height: 400px;
+}
+
+.principles-extra-list {
+  padding-top: 14px;
+}
+
+/* Expand / Collapse button */
+.principles-expand-btn-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-end; /* Push to bottom right */
+  margin-top: auto;
+  padding-top: 14px;
+  background: transparent;
+  border: none;
+  color: #888;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  outline: none;
+}
+
+.principles-expand-btn-small:hover {
+  color: #C84040;
+}
+
+.principles-expand-btn-small svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================================
+   TECH STACK WRAPPER
+   ========================================================================= */
+.tech-stack-wrapper {
+  margin-top: 56px;
+}
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 1024px) {
+  .about-story-image-col {
+    width: 260px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  /* Story card keeps relative positioning for absolute image */
+  .about-story-card {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .about-story-image-col {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: 110px;
+    height: 110px;
+    border: none;
+    border-radius: 16px;
+    padding: 3px;
+    background: linear-gradient(135deg, rgba(179, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.12) 60%, rgba(179, 0, 0, 0.4) 100%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .about-profile-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    overflow: hidden;
+    background: #121212;
+  }
+
+  .about-profile-img {
+    object-position: center 10%;
+    mask-image: none;
+    -webkit-mask-image: none;
+    border-radius: 13px;
+  }
+
+  /* Make room for the absolutely positioned image */
+  .about-card-icon-tag,
+  .about-story-text-col .about-card-title {
+    padding-right: 120px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-luxury-section {
+    padding: 60px 0 0 0;
+  }
+
+  .about-luxury-container {
+    padding: 0 16px;
+    gap: 20px;
+  }
+
+  .tech-stack-wrapper {
+    margin-top: 40px;
+  }
+
+  .about-story-text-col {
+    padding: 28px 24px;
+  }
+
+  .about-story-image-col {
+    top: 28px;
+    right: 24px;
+    width: 90px;
+    height: 90px;
+    border-radius: 14px;
+  }
+
+  .about-profile-frame,
+  .about-profile-img {
+    border-radius: 11px;
+  }
+
+  .about-card-icon-tag,
+  .about-story-text-col .about-card-title {
+    padding-right: 100px;
+  }
+
+  .about-card {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .about-card-body {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  
+  .about-card-title {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-luxury-section {
+    padding: 48px 0 0 0;
+  }
+
+  .about-luxury-container {
+    padding: 0 12px;
+    gap: 16px;
+  }
+
+  .tech-stack-wrapper {
+    margin-top: 32px;
+  }
+
+  .about-story-text-col {
+    padding: 24px 18px;
+  }
+
+  .about-story-image-col {
+    top: 24px;
+    right: 18px;
+    width: 75px;
+    height: 75px;
+    border-radius: 12px;
+  }
+
+  .about-profile-frame,
+  .about-profile-img {
+    border-radius: 9px;
+  }
+
+  .about-card-icon-tag,
+  .about-story-text-col .about-card-title {
+    padding-right: 85px;
+  }
+
+  .about-card {
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+
+  .about-stat-row {
+    gap: 16px;
+  }
+
+  .about-card-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .about-card-body {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .about-card-icon-tag {
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+
+  .about-principles-list li {
+    font-size: 12.5px;
+    line-height: 1.5;
+    gap: 10px;
+  }
+}

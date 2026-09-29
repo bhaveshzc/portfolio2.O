@@ -1,0 +1,276 @@
+/* =========================================================================
+   SKILLS & TECHNOLOGIES TABLE COMPONENT - LUXURY BLACK & CRIMSON
+   ========================================================================= */
+
+.skills-tech-card {
+  width: 100%;
+  background: rgba(14, 14, 14, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  margin-top: 10px;
+}
+
+/* Card Top Header */
+.skills-card-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 28px;
+  background: rgba(18, 18, 18, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skills-section-title {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #F5F5F5;
+  margin: 0;
+}
+
+.skills-title-amp {
+  color: #B30000;
+}
+
+/* Table Body */
+.skills-table-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skills-table-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 58px;
+  transition: background 0.25s ease;
+  position: relative;
+}
+
+.skills-table-row:last-child {
+  border-bottom: none;
+}
+
+.skills-table-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Category Column (Left) */
+.skills-category-col {
+  width: 160px;
+  min-width: 160px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(12, 12, 12, 0.9);
+  z-index: 2;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.category-label-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #B30000;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Marquee Column (Right) */
+.skills-marquee-col {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.skills-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  will-change: transform;
+}
+
+.skills-marquee-col:hover .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+.skills-track-segment {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+/* Alternating Marquee Animations */
+.direction-left {
+  animation: skillsMarqueeLeft linear infinite;
+}
+
+.direction-right {
+  animation: skillsMarqueeRight linear infinite;
+}
+
+@keyframes skillsMarqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes skillsMarqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Clean Icon Item - Container Removed */
+.skills-icon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: #EDEDED;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.skills-tech-icon {
+  font-size: 23px;
+  width: 23px;
+  height: 23px;
+  color: #B5B5B5;
+  transition: transform 0.22s ease, color 0.22s ease, filter 0.22s ease;
+  display: block;
+}
+
+.skills-icon-pill:hover {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transform: translateY(-2px) scale(1.18);
+}
+
+.skills-icon-pill:hover .skills-tech-icon {
+  color: #FFFFFF;
+  filter: drop-shadow(0 0 8px rgba(212, 20, 20, 0.75));
+}
+
+/* =========================================================================
+   RESPONSIVE TABLE FORMAT (Matches Exact 2-Column Table Grid on Mobile)
+   ========================================================================= */
+@media (max-width: 768px) {
+  .skills-card-header {
+    padding: 16px 20px;
+  }
+
+  .skills-section-title {
+    font-size: 13.5px;
+  }
+
+  .skills-table-row {
+    min-height: 52px;
+  }
+
+  .skills-category-col {
+    width: 130px;
+    min-width: 130px;
+    padding: 12px 16px;
+  }
+
+  .category-label-text {
+    font-size: 13px;
+  }
+
+  .skills-marquee-col {
+    padding: 8px 0;
+  }
+
+  .skills-track-segment {
+    gap: 12px;
+    padding-right: 12px;
+  }
+
+  .skills-icon-pill {
+    padding: 6px 10px;
+  }
+
+  .skills-tech-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-tech-card {
+    border-radius: 16px;
+    margin-top: 4px;
+  }
+
+  .skills-card-header {
+    padding: 14px 16px;
+  }
+
+  .skills-section-title {
+    font-size: 12.5px;
+    letter-spacing: 0.12em;
+  }
+
+  .skills-table-row {
+    min-height: 48px;
+  }
+
+  .skills-category-col {
+    width: 105px;
+    min-width: 105px;
+    padding: 10px 12px;
+  }
+
+  .category-label-text {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .skills-marquee-col {
+    padding: 6px 0;
+  }
+
+  .skills-track-segment {
+    gap: 10px;
+    padding-right: 10px;
+  }
+
+  .skills-icon-pill {
+    padding: 4px 8px;
+  }
+
+  .skills-tech-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}

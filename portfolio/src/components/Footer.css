@@ -1,0 +1,342 @@
+/* =========================================================================
+   SITE FOOTER — Luxury Black Theme
+   ========================================================================= */
+
+.site-footer {
+  width: 100%;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  padding: 0 20px 40px; /* Add side padding for floating card */
+  box-sizing: border-box;
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1200px; /* slightly smaller to look like a floating card */
+  margin: 0 auto;
+  padding: 40px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  
+  /* ── Card Texture (Matching website cards) ── */
+  background: linear-gradient(135deg, #1c1c1c 0%, #121212 50%, #0a0a0a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Top Divider (Hidden as it's a card now) ── */
+.footer-top-divider {
+  display: none;
+}
+
+/* ── Row 1: Profile Badge + Social Icons ── */
+.footer-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-profile-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 6px 14px 6px 8px;
+}
+
+.footer-avatar-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #222222;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer-profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.footer-name-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footer-profile-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.footer-verified {
+  font-size: 11px;
+  color: #D41414;
+}
+
+.footer-handle {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  color: #777777;
+}
+
+.footer-connect-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #242424;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 4px;
+  transition: all 0.2s ease;
+}
+
+.footer-connect-pill:hover {
+  background: #333333;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-social-bubbles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-social-btn svg {
+  transition: color 0.2s ease, fill 0.2s ease;
+}
+
+.footer-social-btn:hover {
+  background: #222222;
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #D41414;
+  transform: translateY(-2px);
+}
+
+.footer-social-btn:hover svg {
+  color: #D41414;
+  fill: currentColor;
+}
+
+/* ── Row 2: Email Capsule ── */
+.footer-email-row {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-email-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.footer-email-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #A3A3A3;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: color 0.2s ease;
+}
+
+.footer-email-copy-btn:hover {
+  color: #FFFFFF;
+}
+
+.footer-email-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.footer-copied-hint {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #22C55E;
+}
+
+.footer-email-ext-link {
+  color: #666666;
+  display: inline-flex;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-email-ext-link:hover {
+  color: #D41414;
+}
+
+/* ── Row 3: Nav Links ── */
+.footer-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.footer-nav-link {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #9A9A9A;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: #F5F5F5;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-nav-active {
+  color: #D41414;
+  font-weight: 600;
+}
+
+.footer-nav-active:hover {
+  color: #D41414;
+  background: rgba(212, 20, 20, 0.06);
+}
+
+/* ── Row 4: Copyright ── */
+.footer-copyright-row {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+.footer-copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 0 16px 30px;
+  }
+  
+  .footer-inner {
+    padding: 32px 16px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .footer-badges-row {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .footer-profile-pill {
+    width: 100%;
+    justify-content: space-between;
+    padding: 6px 10px;
+  }
+
+  .footer-social-bubbles {
+    justify-content: center;
+  }
+
+  .footer-nav-row {
+    gap: 4px;
+  }
+
+  .footer-nav-link {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-profile-pill {
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 999px !important;
+    padding: 6px 10px 6px 6px;
+  }
+
+  .footer-connect-pill {
+    margin-left: 0;
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .footer-social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .footer-email-capsule {
+    padding: 6px 10px;
+    gap: 6px;
+    max-width: 100%;
+  }
+
+  .footer-email-text {
+    font-size: clamp(11px, 3.2vw, 12.5px);
+  }
+}
