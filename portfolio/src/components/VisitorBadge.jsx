@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./VisitorBadge.css";
 
 function formatNumberWithCommas(x) {
@@ -14,39 +14,64 @@ function getOrdinalSuffix(num) {
   return "th";
 }
 
-export default function VisitorBadge() {
-  const [visitorCount, setVisitorCount] = useState(() => {
-    try {
-      const stored = typeof window !== "undefined" ? localStorage.getItem("portfolio_visitor_count") : null;
-      if (stored) {
-        return parseInt(stored, 10);
-      }
-      const initial = 35856 + Math.floor(Math.random() * 12);
-      if (typeof window !== "undefined") {
-        localStorage.setItem("portfolio_visitor_count", initial.toString());
-      }
-      return initial;
-    } catch {
-      return 35856;
+// Module-level deduplication to prevent double-firing in React 18/19 StrictMode or multiple mounts
+let initialFetchPromise = null;
+
+async function doFetchVisitorCount() {
+  try {
+    const storedVisitorId = typeof window !== "undefined" ? localStorage.getItem("anon_visitor_id") : null;
+    const headers = {};
+    if (storedVisitorId) {
+      headers["x-visitor-id"] = storedVisitorId;
     }
-  });
+
+    const res = await fetch("/api/visitor-count", {
+      credentials: "include",
+      headers,
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      if (data?.visitorId && typeof window !== "undefined") {
+        localStorage.setItem("anon_visitor_id", data.visitorId);
+      }
+      return data?.count || null;
+    }
+  } catch (err) {
+    console.error("Failed to fetch visitor count:", err);
+  }
+  return null;
+}
+
+export default function VisitorBadge() {
+  const [visitorCount, setVisitorCount] = useState(100);
   const [isSpinning, setIsSpinning] = useState(false);
 
-  const handleRefresh = (e) => {
+  useEffect(() => {
+    if (!initialFetchPromise) {
+      initialFetchPromise = doFetchVisitorCount();
+    }
+    initialFetchPromise.then((count) => {
+      if (count) {
+        setVisitorCount(count);
+      }
+    });
+  }, []);
+
+  const handleRefresh = async (e) => {
     e.preventDefault();
+    if (isSpinning) return;
     setIsSpinning(true);
-    setTimeout(() => {
-      setVisitorCount((prev) => {
-        const next = prev + 1;
-        try {
-          localStorage.setItem("portfolio_visitor_count", next.toString());
-        } catch {
-          // ignore
-        }
-        return next;
-      });
-      setIsSpinning(false);
-    }, 450);
+    try {
+      const count = await doFetchVisitorCount();
+      if (count) {
+        setVisitorCount(count);
+      }
+    } catch {
+      // Graceful fallback on error
+    } finally {
+      setTimeout(() => setIsSpinning(false), 450);
+    }
   };
 
   const suffix = getOrdinalSuffix(visitorCount);
