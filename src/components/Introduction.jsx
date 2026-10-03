@@ -88,15 +88,30 @@ export default function Introduction() {
               ================================================================== */}
           <div className="luxury-glass-card top-profile-fullwidth-card">
 
-            {/* Top Row: Square Avatar, Animated Role Label, Name, Marquee Right Below Name */}
+            {/* Top Row: Square Avatar, Availability Status, Animated Role Label, Name, Marquee */}
             <div className="profile-top-row">
-              <div className="profile-avatar-container square-avatar-ring">
-                <img
-                  src="/profile.png"
-                  alt="Bhavesh Bisht"
-                  className="profile-avatar-img square-avatar-img"
-                  loading="eager"
-                />
+              <div className="profile-avatar-col">
+                <div className="profile-avatar-container square-avatar-ring">
+                  <img
+                    src="/profile.png"
+                    alt="Bhavesh Bisht"
+                    className="profile-avatar-img square-avatar-img"
+                    loading="eager"
+                  />
+                </div>
+
+                {/* Available for Projects Badge */}
+                <Link
+                  to="/contact"
+                  className="avatar-availability-badge"
+                  title="Available for projects — Get in touch"
+                >
+                  <span className="availability-dot" aria-hidden="true">
+                    <span className="availability-dot-ping" />
+                    <span className="availability-dot-core" />
+                  </span>
+                  <span className="availability-text">Available for projects</span>
+                </Link>
               </div>
 
               <div className="profile-identity">

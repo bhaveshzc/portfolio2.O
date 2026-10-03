@@ -131,6 +131,30 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "the-last-trunks";
+  src: url("./assets/fonts/the-last-trunks/THELASTTRUNKS-Personal-Use-Only.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Morganite";
+  src: url("./assets/fonts/morganite/Morganite/Morganite-Black.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Morganite";
+  src: url("./assets/fonts/morganite/Morganite/Morganite-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 

@@ -6,14 +6,14 @@ import "./navbar.css";
 const navItems = [
   { heading: "Home", href: "/" },
   { heading: "About", href: "/journey" },
-  { heading: "Services", href: "/#services" },
+  { heading: "Services", href: "/services" },
   { heading: "Projects", href: "/projects" },
   { heading: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const location = useLocation();
-  const isDarkPage = location.pathname !== "/";
+  const isWhiteBgPage = location.pathname === "/services";
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function Navbar() {
         <CurvedMenu navItems={navItems} />
       </div>
 
-      <header className={`header-container ${isDarkPage ? "navbar-dark-theme" : ""}`}>
+      <header className={`header-container ${isWhiteBgPage ? "navbar-dark-theme" : ""}`}>
         <nav className="navbar">
           {/* Left: Logo / Name */}
           <div className="nav-left">
@@ -39,9 +39,9 @@ export default function Navbar() {
             <Link to="/journey" className={location.pathname === "/journey" ? "active-link" : ""}>
               About
             </Link>
-            <a href="/#services" className="nav-link-anchor">
+            <Link to="/services" className={location.pathname === "/services" ? "active-link" : ""}>
               Services
-            </a>
+            </Link>
             <Link to="/projects" className={location.pathname === "/projects" ? "active-link" : ""}>
               Projects
             </Link>
@@ -54,6 +54,8 @@ export default function Navbar() {
               size="sm"
               radius={18}
               autoAnimate={false}
+              textColor={isWhiteBgPage ? "#D41414" : "#f5f5f5"}
+              lineColor={isWhiteBgPage ? "#D41414" : "#ffffff"}
             >
               Contact
             </SpecularButton>
