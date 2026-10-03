@@ -56,12 +56,13 @@
   min-height: 100vh;
 }
 
-/* ── Left / Text Column ── */
 .services-hero__text-col {
   max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 0;
+  position: relative;
+  z-index: 10;
 }
 
 /* ── Section Indicator (01 / SERVICES) ── */
@@ -78,13 +79,13 @@
 
 /* ── Main Headline ── */
 .services-hero__headline {
-  font-family: 'Morganite', 'Syne', sans-serif;
+  font-family: 'coolvetica', sans-serif;
   font-size: clamp(42px, 5vw, 64px);
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.05em;
   margin: 0 0 36px;
-  text-transform: uppercase;
+
 }
 
 .services-hero__headline-line {
@@ -122,15 +123,16 @@
 
 .services-hero__philosophy-label {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 11.5px;
+  font-size: clamp(18px, 2vw, 24px);
+  /* Larger than list items */
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #0A0A0A;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 
 .services-hero__philosophy-items {
@@ -173,76 +175,14 @@
 
 /* ── Bold Statement ── */
 .services-hero__bold-statement {
-  font-family: 'Syne', 'Inter', sans-serif;
-  font-size: clamp(16px, 1.8vw, 20px);
-  font-weight: 800;
+  font-family: 'Coolvetica', 'coolvetica', 'Syne', 'Inter', sans-serif;
+  font-size: clamp(20px, 2vw, 20px);
+  font-weight: 200;
   line-height: 1.4;
   color: #0A0A0A;
   margin-bottom: 36px;
   max-width: 440px;
   letter-spacing: -0.01em;
-}
-
-/* ── Credential / Service Card ── */
-.services-hero__card {
-  background: #0A0A0A;
-  color: #F5F5F5;
-  border-radius: 14px;
-  padding: 28px 32px;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-}
-
-.services-hero__card-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.services-hero__card-icon {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-red, #B30000);
-  margin-top: 1px;
-}
-
-.services-hero__card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.services-hero__card-title {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #F5F5F5;
-}
-
-.services-hero__card-sub {
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 11.5px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #7A7A7A;
-}
-
-/* Divider line inside the card */
-.services-hero__card-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0;
 }
 
 /* =========================================================================
@@ -251,11 +191,12 @@
 .services-hero__visual-col {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   min-height: 600px;
   overflow: visible;
   padding: 40px 20px 0 20px;
+  z-index: 0;
 }
 
 /* ── Empty Visual Container ── */
@@ -263,7 +204,7 @@
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   z-index: 1;
   pointer-events: none;
@@ -309,13 +250,13 @@
 .services-hero__image-slot {
   position: relative;
   width: 100%;
-  height: 50%;
+  height: 70%;
   /* Adjust this height % to change how high the image goes! */
   display: flex;
-  margin-bottom: 500px;
-  /* Moves the image UP by 20px */
+  margin-bottom: 0px;
+  /* Moves the image UP */
   justify-content: center;
-  z-index: 1;
+  z-index: 0;
 }
 
 .services-hero__image-slot img,
@@ -334,7 +275,8 @@
 .services-hero__annotations {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 0;
+  /* Placed behind the image frame (which is z-index 1) */
   pointer-events: none;
 }
 
@@ -358,55 +300,67 @@
 }
 
 /* Connecting line from annotation */
-.services-hero__annotation-line {
-  width: 1px;
-  height: 28px;
-  background: rgba(0, 0, 0, 0.2);
+.services-hero__annotation-line-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.services-hero__annotation-line-v {
+  width: 2px;
+  height: 40px;
+  background: #D41414;
+  /* Using red as requested in drawing */
+}
+
+.services-hero__annotation-line-d {
+  width: 2px;
+  height: 40px;
+  background: #D41414;
+  /* Using red */
+  transform-origin: top center;
+}
+
+.services-hero__annotation-line-d--right {
+  transform: rotate(-45deg);
+  /* Points down-right */
+}
+
+.services-hero__annotation-line-d--left {
+  transform: rotate(45deg);
+  /* Points down-left */
 }
 
 .services-hero__annotation-line--horizontal {
-  width: 28px;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.2);
+  width: 80px;
+  height: 2px;
+  background: #D41414;
 }
 
 /* ── Annotation Positioning ── */
 /* Top-left: FRONTEND DEVELOPMENT */
 .services-hero__annotation--tl {
-  top: 5%;
-  left: -4%;
-  align-items: flex-end;
-}
-
-.services-hero__annotation--tl .services-hero__annotation-line {
-  align-self: flex-end;
-  margin-right: 4px;
+  top: 15%;
+  left: 10%;
+  align-items: center;
 }
 
 /* Top-right: BACKEND SYSTEMS */
 .services-hero__annotation--tr {
-  top: 8%;
-  right: 0%;
-  align-items: flex-start;
-}
-
-.services-hero__annotation--tr .services-hero__annotation-line {
-  align-self: flex-start;
-  margin-left: 4px;
+  top: 15%;
+  right: 10%;
+  align-items: center;
 }
 
 /* Mid-right: APIs & INTEGRATIONS */
 .services-hero__annotation--mr {
   top: 50%;
-  right: -2%;
+  right: 0%;
   transform: translateY(-50%);
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   gap: 8px;
-}
-
-.services-hero__annotation--mr .services-hero__annotation-line--horizontal {
-  align-self: center;
 }
 
 .services-hero__annotation--mr .services-hero__annotation-text-group {
@@ -415,17 +369,14 @@
   gap: 1px;
 }
 
-/* Bottom-left: DATABASE & ARCHITECTURE */
+/* Bottom-left: DATABASE & ARCHITECTURE (4th label) */
 .services-hero__annotation--bl {
-  bottom: 12%;
-  left: -2%;
-  align-items: flex-end;
+  bottom: 25%;
+  left: 15%;
+  /* Moved significantly right to avoid overlap */
+  align-items: center;
   flex-direction: row-reverse;
   gap: 8px;
-}
-
-.services-hero__annotation--bl .services-hero__annotation-line--horizontal {
-  align-self: center;
 }
 
 .services-hero__annotation--bl .services-hero__annotation-text-group {
@@ -437,14 +388,9 @@
 
 /* Bottom-right: AUTOMATION & WORKFLOWS */
 .services-hero__annotation--br {
-  bottom: 8%;
-  right: 0%;
-  align-items: flex-start;
-}
-
-.services-hero__annotation--br .services-hero__annotation-line {
-  align-self: flex-start;
-  margin-left: 4px;
+  bottom: 15%;
+  right: 10%;
+  align-items: center;
 }
 
 /* =========================================================================

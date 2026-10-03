@@ -79,10 +79,10 @@ export default function ServicesHero() {
           {/* Main headline */}
           <motion.h1 className="services-hero__headline" variants={fadeUp}>
             <span className="services-hero__headline-line">
-              i don't just make a good ui.
+              I don't just make a Good UI.
             </span>
             <span className="services-hero__headline-line services-hero__headline-line--accent">
-              i build addictive ui.
+              I build Adictive UI.
             </span>
           </motion.h1>
 
@@ -137,94 +137,6 @@ export default function ServicesHero() {
             If it doesn't help the business move forward, it doesn't belong.
           </motion.p>
 
-          {/* Credential / Service card */}
-          <motion.div className="services-hero__card" variants={fadeUp}>
-            {/* Row 1: Experience */}
-            <div className="services-hero__card-row">
-              <div className="services-hero__card-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="8" r="7" />
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                </svg>
-              </div>
-              <div className="services-hero__card-info">
-                <span className="services-hero__card-title">
-                  2 YEARS OF EXPERIENCE
-                </span>
-                <span className="services-hero__card-sub">
-                  BUILDING &bull; SHIPPING &bull; GROWING
-                </span>
-              </div>
-            </div>
-
-            <div className="services-hero__card-divider" />
-
-            {/* Row 2: Web Experiences */}
-            <div className="services-hero__card-row">
-              <div className="services-hero__card-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-              </div>
-              <div className="services-hero__card-info">
-                <span className="services-hero__card-title">
-                  WEB EXPERIENCES
-                </span>
-                <span className="services-hero__card-sub">
-                  WEBSITES &bull; E-COMMERCE &bull; WEB APPS
-                </span>
-              </div>
-            </div>
-
-            <div className="services-hero__card-divider" />
-
-            {/* Row 3: Custom Systems */}
-            <div className="services-hero__card-row">
-              <div className="services-hero__card-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                </svg>
-              </div>
-              <div className="services-hero__card-info">
-                <span className="services-hero__card-title">
-                  CUSTOM SYSTEMS
-                </span>
-                <span className="services-hero__card-sub">
-                  APIs &bull; AUTOMATIONS &bull; INTEGRATIONS
-                </span>
-              </div>
-            </div>
-          </motion.div>
         </div>
 
         {/* ================================================================
@@ -254,7 +166,10 @@ export default function ServicesHero() {
             >
               <span className="services-hero__annotation-text">FRONTEND</span>
               <span className="services-hero__annotation-text">DEVELOPMENT</span>
-              <div className="services-hero__annotation-line" />
+              <div className="services-hero__annotation-line-group">
+                <div className="services-hero__annotation-line-v" />
+                <div className="services-hero__annotation-line-d services-hero__annotation-line-d--right" />
+              </div>
             </motion.div>
 
             {/* Top-right: BACKEND SYSTEMS */}
@@ -262,9 +177,12 @@ export default function ServicesHero() {
               className="services-hero__annotation services-hero__annotation--tr"
               variants={annotationReveal}
             >
-              <div className="services-hero__annotation-line" />
               <span className="services-hero__annotation-text">BACKEND</span>
               <span className="services-hero__annotation-text">SYSTEMS</span>
+              <div className="services-hero__annotation-line-group">
+                <div className="services-hero__annotation-line-v" />
+                <div className="services-hero__annotation-line-d services-hero__annotation-line-d--left" />
+              </div>
             </motion.div>
 
             {/* Mid-right: APIs & INTEGRATIONS */}
@@ -296,9 +214,12 @@ export default function ServicesHero() {
               className="services-hero__annotation services-hero__annotation--br"
               variants={annotationReveal}
             >
-              <div className="services-hero__annotation-line" />
               <span className="services-hero__annotation-text">AUTOMATION</span>
               <span className="services-hero__annotation-text">& WORKFLOWS</span>
+              <div className="services-hero__annotation-line-group">
+                <div className="services-hero__annotation-line-v" />
+                <div className="services-hero__annotation-line-d services-hero__annotation-line-d--left" />
+              </div>
             </motion.div>
           </div>
 
