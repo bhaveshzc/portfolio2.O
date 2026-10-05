@@ -102,3 +102,8 @@
   color: #0A0A0A;
   box-sizing: border-box;
 }
+
+.services-page-container,
+.services-page-container * {
+  font-family: 'Coolvetica', sans-serif !important;
+}

@@ -116,6 +116,20 @@
   margin-bottom: 0;
 }
 
+.services-hero__highlight-link {
+  color: #D41414;
+  /* Red highlight */
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.services-hero__highlight-link:hover {
+  border-bottom: 2px solid #D41414;
+  opacity: 0.8;
+}
+
 /* ── Service Philosophy List ── */
 .services-hero__philosophy {
   margin-bottom: 32px;
@@ -127,7 +141,8 @@
   /* Larger than list items */
   font-weight: 800;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
+  text-transform: none;
+  /* Changed to normal case */
   color: #0A0A0A;
   margin-bottom: 12px;
   text-decoration: underline;
@@ -147,11 +162,13 @@
 .services-hero__philosophy-items li {
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: clamp(14px, 1.6vw, 18px);
-  font-weight: 700;
+  font-weight: 500;
+  /* Reduced font weight */
   letter-spacing: -0.01em;
   color: #0A0A0A;
   line-height: 1.5;
-  text-transform: uppercase;
+  text-transform: none;
+  /* Removed uppercase */
 }
 
 /* ── Secondary Paragraph ── */
@@ -175,13 +192,21 @@
 
 /* ── Bold Statement ── */
 .services-hero__bold-statement {
-  font-family: 'Coolvetica', 'coolvetica', 'Syne', 'Inter', sans-serif;
-  font-size: clamp(20px, 2vw, 20px);
+  font-family: 'Coolvetica', sans-serif;
+  font-size: clamp(40px, 4vw, 60px);
+  /* I fixed this for PC screen! */
   font-weight: 200;
   line-height: 1.4;
   color: #0A0A0A;
   margin-bottom: 36px;
-  max-width: 440px;
+  margin-top: 10px;
+  /* Reduced gap between this and the sentence above */
+  transform: translateX(20px);
+  max-width: 150%;
+  /* Allow it to overflow and overlap the image */
+  position: relative;
+  /* Keep it above the image */
+  z-index: 20;
   letter-spacing: -0.01em;
 }
 
@@ -214,7 +239,7 @@
 /* Subtle background watermark text */
 .services-hero__visual-watermark {
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 0;
   width: 100%;
   display: flex;
@@ -224,7 +249,7 @@
   font-size: clamp(140px, 20vw, 340px);
   font-weight: 900;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.19);
   letter-spacing: -0.04em;
   line-height: 1;
   pointer-events: none;
@@ -250,13 +275,15 @@
 .services-hero__image-slot {
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 100%;
   /* Adjust this height % to change how high the image goes! */
   display: flex;
   margin-bottom: 0px;
   /* Moves the image UP */
   justify-content: center;
   z-index: 0;
+  /* ADD THIS LINE TO MOVE IT UP OR DOWN */
+  transform: translateY(80px);
 }
 
 .services-hero__image-slot img,
@@ -275,8 +302,8 @@
 .services-hero__annotations {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  /* Placed behind the image frame (which is z-index 1) */
+  z-index: 2;
+  /* Placed in front of the image frame so text is never hidden */
   pointer-events: none;
 }
 
@@ -342,24 +369,26 @@
 /* Top-left: FRONTEND DEVELOPMENT */
 .services-hero__annotation--tl {
   top: 15%;
-  left: 10%;
+  left: -5%;
   align-items: center;
 }
 
 /* Top-right: BACKEND SYSTEMS */
 .services-hero__annotation--tr {
   top: 15%;
-  right: 10%;
+  right: -5%;
   align-items: center;
 }
 
-/* Mid-right: APIs & INTEGRATIONS */
+/* Mid-left: APIs & INTEGRATIONS */
 .services-hero__annotation--mr {
-  top: 50%;
-  right: 0%;
-  transform: translateY(-50%);
+  top: 40%;
+  /* Moved up slightly */
+  left: -10%;
+  /* Moved to the left side */
   align-items: center;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  /* Reverses the order so text is on the outside */
   gap: 8px;
 }
 
@@ -367,15 +396,18 @@
   display: flex;
   flex-direction: column;
   gap: 1px;
+  text-align: right;
+  /* Aligns text cleanly against the line */
 }
 
-/* Bottom-left: DATABASE & ARCHITECTURE (4th label) */
+/* Database & Architecture (Now Mid-Right near neck) */
 .services-hero__annotation--bl {
-  bottom: 25%;
-  left: 15%;
-  /* Moved significantly right to avoid overlap */
+  top: 55%;
+  right: -5%;
+  bottom: auto;
+  left: auto;
   align-items: center;
-  flex-direction: row-reverse;
+  flex-direction: row;
   gap: 8px;
 }
 
@@ -383,14 +415,30 @@
   display: flex;
   flex-direction: column;
   gap: 1px;
+  text-align: left;
+}
+
+/* Bottom-left-2: AUTOMATION & WORKFLOWS */
+.services-hero__annotation--br {
+  bottom: 38%;
+  left: -5%;
+  /* Pushed deep into the left white area */
+  align-items: center;
+  flex-direction: row;
+  /* Renders Text on left, Line on right pointing toward image */
+  gap: 8px;
+}
+
+.services-hero__annotation--br .services-hero__annotation-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
   text-align: right;
 }
 
-/* Bottom-right: AUTOMATION & WORKFLOWS */
-.services-hero__annotation--br {
-  bottom: 15%;
-  right: 10%;
-  align-items: center;
+/* Make the text white so it's visible on the black sweater! */
+.services-hero__annotation--br .services-hero__annotation-text {
+  color: #0a0a0a;
 }
 
 /* =========================================================================
@@ -504,7 +552,7 @@
   }
 
   .services-hero__bold-statement {
-    font-size: 16px;
+    font-size: 40px;
     max-width: 100%;
   }
 

@@ -1,0 +1,188 @@
+/* =========================================================================
+   HOW I WORK — Standard Layout with GSAP Scroll Trigger
+   ========================================================================= */
+
+   .hiw {
+    position: relative;
+    background: #faf9f7;
+    padding: 120px 20px 200px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hiw__container {
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  /* ── Header ─────────────────────────────────────────────────────────────── */
+  .hiw__header {
+    margin-bottom: 120px;
+    text-align: left;
+  }
+  
+  .hiw__label {
+    display: block;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8B0000;
+    margin-bottom: 14px;
+  }
+  
+  .hiw__headline {
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: 0.95;
+  }
+  
+  .hiw__h-black {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 900;
+    color: #0a0a0a;
+    letter-spacing: 0.03em;
+  }
+  
+  .hiw__h-red {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 900;
+    color: #8B0000;
+    letter-spacing: 0.03em;
+  }
+  
+  .hiw__intro-light {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 500px;
+  }
+  
+  /* ── Stage & Rail ───────────────────────────────────────────────────────── */
+  .hiw__stage {
+    position: relative;
+    padding-left: 60px;
+  }
+  
+  .hiw__rail {
+    position: absolute;
+    left: 20px;
+    width: 3px;
+    background: rgba(139, 0, 0, 0.2);
+    /* top and height are dynamically managed by GSAP to perfectly span 01 to 06 */
+  }
+  
+  .hiw__rail-dot {
+    position: absolute;
+    left: 50%;
+    margin-left: -7px;
+    top: 0; 
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #8B0000;
+    /* y is scrubbed by GSAP */
+  }
+  
+  /* ── Steps ──────────────────────────────────────────────────────────────── */
+  .hiw__steps {
+    display: flex;
+    flex-direction: column;
+    /* Increased gap drastically so scrolling takes more time */
+    gap: 150px; 
+  }
+  
+  .hiw__step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    will-change: transform, opacity, filter;
+  }
+  
+  .hiw__num {
+    font-family: 'Morganite', sans-serif !important;
+    font-size: clamp(160px, 20vw, 240px);
+    font-weight: 700;
+    line-height: 0.75;
+    letter-spacing: 0;
+    color: #8B0000 !important;
+    min-width: 140px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  
+  .hiw__step-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 460px;
+    padding-top: 10px;
+  }
+  
+  .hiw__step-title {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    color: #0a0a0a;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  
+  .hiw__step-sub {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+  }
+  
+  .hiw__step-body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 14.5px;
+    color: #777;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* ── Responsive ─────────────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .hiw {
+      padding: 80px 20px 100px;
+    }
+    
+    .hiw__stage {
+      padding-left: 30px;
+    }
+    
+    .hiw__rail {
+      left: 10px;
+    }
+    
+    .hiw__steps {
+      gap: 100px; /* slightly smaller gap on mobile */
+    }
+    
+    .hiw__step {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    
+    .hiw__num {
+      min-width: auto;
+      text-align: left;
+      font-size: clamp(80px, 18vw, 120px);
+    }
+  }

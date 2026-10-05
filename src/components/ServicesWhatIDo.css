@@ -1,0 +1,195 @@
+.what-i-do-section {
+  background: #111111;
+  color: #FFFFFF;
+  padding: 80px 20px 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.what-i-do__container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ── Top Header Bar ── */
+.what-i-do__header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.what-i-do__label-left {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #D41414; /* Red accent matching 01 / BEHIND THE WORK */
+}
+
+.what-i-do__label-right {
+  color: #FFFFFF;
+}
+
+/* ── Main Content ── */
+.what-i-do__content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.what-i-do__text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+.what-i-do__headline {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap; /* Ensures "the whole product" stays on one line */
+}
+
+.what-i-do__highlight {
+  color: #D41414;
+}
+
+.what-i-do__intro {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #CCCCCC;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* ── Grid Area ── */
+.what-i-do__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 480px)); /* Increased width */
+  justify-content: center;
+  gap: 100px 24px; /* Significantly increased row gap (Y axis) */
+}
+
+/* ── Cards ── */
+.what-i-do__card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px 20px; /* Reduced padding to remove vacant space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #0A0A0A;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 4 / 3; /* Increased width, reduced height (wider than tall) */
+}
+
+.what-i-do__card-title-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-i-do__card-title-cursive {
+  font-family: 'Coolvetica', sans-serif; /* Changed to Coolvetica */
+  font-size: clamp(40px, 4.5vw, 56px); /* MATCHED font size */
+  font-weight: normal;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  color: #9C1111;
+  line-height: 0.9;
+  margin-bottom: -5px; 
+}
+
+.what-i-do__card-title-main {
+  font-family: 'Coolvetica', sans-serif; /* Changed to Coolvetica */
+  font-size: clamp(40px, 4.5vw, 56px); /* Increased font size */
+  font-weight: normal; /* Coolvetica is already bold usually */
+  letter-spacing: 0.02em;
+  line-height: 0.9; /* Reduced gap between lines for wrapped titles */
+  color: #9C1111; /* Darker red */
+  margin: 0;
+  text-transform: capitalize; /* First letter uppercase */
+}
+
+.what-i-do__card-subtitle {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 16px;
+  line-height: 1.4;
+  text-align: left;
+  width: 100%;
+}
+
+.what-i-do__card-desc {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5; /* Slightly tighter line-height */
+  margin: 0 0 16px; /* Reduced margin */
+  flex-grow: 1;
+  text-align: left;
+  width: 100%;
+}
+
+/* Black pill tag */
+.what-i-do__card-tag-wrapper {
+  margin-top: auto; /* Push to bottom */
+}
+
+.what-i-do__card-tag {
+  display: inline-block;
+  background: #000000;
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .what-i-do__text-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .what-i-do__headline {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-i-do__header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .what-i-do__card {
+    aspect-ratio: auto;
+    min-height: 380px;
+  }
+}

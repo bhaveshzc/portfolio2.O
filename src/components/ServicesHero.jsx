@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import "./ServicesHero.css";
 
 /* ── Framer Motion Variants ── */
@@ -89,7 +90,7 @@ export default function ServicesHero() {
           {/* Introduction copy */}
           <motion.div className="services-hero__intro" variants={fadeUp}>
             <p>
-              I'm Bhavesh Bisht, a full stack developer and designer helping
+              I'm <Link to="/about" className="services-hero__highlight-link">Bhavesh Bisht</Link>, a full stack developer and designer helping
               local businesses, creators, and brands turn good offers into
               digital experiences people actually want to buy from.
             </p>
@@ -108,11 +109,11 @@ export default function ServicesHero() {
               I think about:
             </div>
             <ul className="services-hero__philosophy-items">
-              <li>THE OFFER.</li>
-              <li>THE CUSTOMER.</li>
-              <li>THE BUYING JOURNEY.</li>
-              <li>THE FRICTION.</li>
-              <li>THE MONEY.</li>
+              <li>The Offer.</li>
+              <li>The Customer.</li>
+              <li>The Buying Journey.</li>
+              <li>The Friction.</li>
+              <li>The Money.</li>
             </ul>
           </motion.div>
 
@@ -131,12 +132,6 @@ export default function ServicesHero() {
               something completely custom, the rule stays the same:
             </p>
           </motion.div>
-
-          {/* Bold statement */}
-          <motion.p className="services-hero__bold-statement" variants={fadeUp}>
-            If it doesn't help the business move forward, it doesn't belong.
-          </motion.p>
-
         </div>
 
         {/* ================================================================
@@ -197,29 +192,28 @@ export default function ServicesHero() {
               </div>
             </motion.div>
 
-            {/* Bottom-left: DATABASE & ARCHITECTURE */}
+            {/* Mid-Right-2: DATABASE & ARCHITECTURE (Neck) */}
             <motion.div
               className="services-hero__annotation services-hero__annotation--bl"
               variants={annotationReveal}
             >
+              <div className="services-hero__annotation-line--horizontal" />
               <div className="services-hero__annotation-text-group">
                 <span className="services-hero__annotation-text">DATABASE &</span>
                 <span className="services-hero__annotation-text">ARCHITECTURE</span>
               </div>
-              <div className="services-hero__annotation-line--horizontal" />
             </motion.div>
 
-            {/* Bottom-right: AUTOMATION & WORKFLOWS */}
+            {/* Bottom-left-2: AUTOMATION & WORKFLOWS */}
             <motion.div
               className="services-hero__annotation services-hero__annotation--br"
               variants={annotationReveal}
             >
-              <span className="services-hero__annotation-text">AUTOMATION</span>
-              <span className="services-hero__annotation-text">& WORKFLOWS</span>
-              <div className="services-hero__annotation-line-group">
-                <div className="services-hero__annotation-line-v" />
-                <div className="services-hero__annotation-line-d services-hero__annotation-line-d--left" />
+              <div className="services-hero__annotation-text-group">
+                <span className="services-hero__annotation-text">AUTOMATION</span>
+                <span className="services-hero__annotation-text">& WORKFLOWS</span>
               </div>
+              <div className="services-hero__annotation-line--horizontal" />
             </motion.div>
           </div>
 
