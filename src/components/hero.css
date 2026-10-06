@@ -50,7 +50,7 @@
 }
 
 .Full-Stak {
-  font-family: "soulstice-brush-script-demo", "Alex Brush", "Dancing Script", "Cormorant Garamond", cursive, serif;
+  font-family: "soulstice-brush-script-demo", serif;
   font-size: clamp(42px, 7.5vw, 85px);
   letter-spacing: 5px;
   color: #000000;

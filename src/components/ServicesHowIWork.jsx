@@ -18,20 +18,15 @@ const steps = [
 export default function ServicesHowIWork() {
   const containerRef = useRef(null);
   const railRef = useRef(null);
+  const fillRef = useRef(null);
   const dotRef = useRef(null);
-  const stepRefs = useRef([]);
-  stepRefs.current = [];
 
-  const addToRefs = (el) => {
-    if (el && !stepRefs.current.includes(el)) {
-      stepRefs.current.push(el);
-    }
-  };
 
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const stepsElements = stepRefs.current;
+    const stepsElements = gsap.utils.toArray(".hiw__step", containerRef.current);
     const rail = railRef.current;
+    const fill = fillRef.current;
     const dot = dotRef.current;
 
     if (prefersReducedMotion) {
@@ -41,32 +36,41 @@ export default function ServicesHowIWork() {
     }
 
     // Dynamic Rail & Single Dot Animation
-    if (stepsElements.length >= 2 && rail && dot) {
+    if (stepsElements.length >= 2 && rail && dot && fill) {
       const firstStep = stepsElements[0];
       const lastStep = stepsElements[stepsElements.length - 1];
 
-      gsap.to(dot, {
-        y: () => {
-          // Calculate the center of the first step and last step
-          const startY = firstStep.offsetTop + firstStep.offsetHeight / 2;
-          const endY = lastStep.offsetTop + lastStep.offsetHeight / 2;
-          
-          // Set the line to strictly connect the two centers
-          gsap.set(rail, { top: startY, height: endY - startY });
-          
-          // Return the distance the dot needs to travel
-          return endY - startY;
-        },
-        ease: "none",
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: firstStep,
-          start: "center center", 
+          start: "center center",
           endTrigger: lastStep,
-          end: "center center", 
+          end: "center center",
           scrub: true,
           invalidateOnRefresh: true,
         }
       });
+
+      tl.to(dot, {
+        y: () => {
+          // Calculate the center of the first step and last step
+          const startY = firstStep.offsetTop + firstStep.offsetHeight / 2;
+          const endY = lastStep.offsetTop + lastStep.offsetHeight / 2;
+
+          // Set the line to strictly connect the two centers
+          gsap.set(rail, { top: startY, height: endY - startY });
+
+          // Return the distance the dot needs to travel
+          return endY - startY;
+        },
+        ease: "none",
+      }, 0);
+
+      tl.fromTo(fill,
+        { scaleY: 0 },
+        { scaleY: 1, ease: "none" },
+        0
+      );
     }
 
     // Individual Step Focus Animation
@@ -93,7 +97,7 @@ export default function ServicesHowIWork() {
       // Animate INTO focus (Steps 02-06)
       // Unblurs ONLY when the dot hits the tip of THIS step, finishing at the middle
       if (i > 0) {
-        gsap.fromTo(step, 
+        gsap.fromTo(step,
           { opacity: 0.15, filter: "blur(8px)", scale: 0.8 },
           {
             opacity: 1,
@@ -103,9 +107,9 @@ export default function ServicesHowIWork() {
             immediateRender: false,
             scrollTrigger: {
               trigger: step,
-              start: "top center", 
-              end: "center center", 
-              scrub: true,         
+              start: "top center",
+              end: "center center",
+              scrub: true,
             }
           }
         );
@@ -114,7 +118,7 @@ export default function ServicesHowIWork() {
       // Animate OUT of focus (Steps 01-05)
       // Blurs ONLY when the dot hits the tip of the NEXT step, finishing at its middle
       if (nextStep) {
-        gsap.fromTo(step, 
+        gsap.fromTo(step,
           { opacity: 1, filter: "blur(0px)", scale: 1 },
           {
             opacity: 0.15,
@@ -137,13 +141,13 @@ export default function ServicesHowIWork() {
   return (
     <section className="hiw" ref={containerRef} aria-label="How I Work">
       <div className="hiw__container">
-        
+
         {/* Header Block - Left Aligned */}
         <div className="hiw__header">
           <span className="hiw__label">04 / HOW I WORK</span>
           <h2 className="hiw__headline">
-            <span className="hiw__h-black">no random code.</span>
-            <span className="hiw__h-red">every step has a job.</span>
+            <span className="hiw__h-black">No random code.</span>
+            <span className="hiw__h-red">Every step has a job.</span>
           </h2>
           <p className="hiw__intro-light">
             We start with the problem, map the system, design around real users,
@@ -154,11 +158,12 @@ export default function ServicesHowIWork() {
         {/* Steps Stage */}
         <div className="hiw__stage">
           <div className="hiw__rail" aria-hidden="true" ref={railRef}>
+            <div className="hiw__rail-fill" ref={fillRef} />
             <div className="hiw__rail-dot" ref={dotRef} />
           </div>
           <div className="hiw__steps">
             {steps.map((step) => (
-              <div key={step.num} className="hiw__step" ref={addToRefs}>
+              <div key={step.num} className="hiw__step">
                 <span className="hiw__num">{step.num}</span>
                 <div className="hiw__step-text">
                   <span className="hiw__step-title">{step.title}</span>
