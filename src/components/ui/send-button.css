@@ -1,6 +1,6 @@
 /* =========================================================================
    SEND BUTTON - FLYING AIRPLANE INTERACTION
-   Color: Crimson #D41414 to match portfolio theme
+   Color: Crimson #e00101 to match portfolio theme
    ========================================================================= */
 
 .send-btn-wrapper {
@@ -13,7 +13,7 @@
   align-items: center;
   gap: 0;
   border-radius: 25px;
-  background: #D41414;
+  background: #e00101;
   color: #000000;
   font-family: 'Inter', sans-serif;
   font-size: 14.5px;

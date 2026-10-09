@@ -65,7 +65,7 @@ export default function ServicesHero() {
       >
         {/* Subtle watermark spanning from left to right behind everything */}
         <div className="services-hero__visual-watermark" aria-hidden="true">
-          HIRE ME
+          H I R E ME
         </div>
         {/* ================================================================
             LEFT COLUMN — Text Content
@@ -73,9 +73,10 @@ export default function ServicesHero() {
         <div className="services-hero__text-col">
 
           {/* Section indicator */}
-          <motion.span className="services-hero__label" variants={fadeUp}>
-            01 / BEHIND THE WORK
-          </motion.span>
+          <motion.div className="services-hero__label" variants={fadeUp}>
+            <span className="label-num">01 / </span>
+            <span className="label-text">BEHIND THE WORK</span>
+          </motion.div>
 
           {/* Main headline */}
           <motion.h1 className="services-hero__headline" variants={fadeUp}>

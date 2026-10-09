@@ -7,10 +7,10 @@
   background-color: #faf9f7;
   background-image:
     /* Soft red glow on the left */
-    radial-gradient(circle at 0% 50%, rgba(139, 0, 0, 0.06) 0%, transparent 70%),
+    radial-gradient(circle at 0% 50%, rgba(224, 1, 1, 0.06) 0%, transparent 70%),
     /* Grid texture */
-    linear-gradient(rgba(139, 0, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 0, 0, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(224, 1, 1, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(224, 1, 1, 0.04) 1px, transparent 1px);
   background-size: 100% 100%, 60px 60px, 60px 60px;
   background-position: 0 0, center top, center top;
   padding: 120px 20px 200px;
@@ -20,7 +20,7 @@
 }
 
 .hiw__container {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -31,14 +31,21 @@
 }
 
 .hiw__label {
-  display: block;
-  font-family: 'Coolvetica', sans-serif;
-  font-size: 13px;
+  display: flex;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #8B0000;
   margin-bottom: 14px;
+}
+.hiw__label .label-num {
+  color: #e00101;
+  letter-spacing: 0.05em; /* reduced gap */
+  margin-right: 4px;
+}
+.hiw__label .label-text {
+  color: #000000;
+  letter-spacing: 0.05em; /* reduced gap */
 }
 
 .hiw__headline {
@@ -50,18 +57,20 @@
 }
 
 .hiw__h-black {
-  font-family: 'Coolvetica', sans-serif;
-  font-size: clamp(36px, 5vw, 64px);
-  font-weight: 900;
-  color: #0a0a0a;
+  font-family: 'Coolvetica', sans-serif !important;
+  font-size: clamp(42px, 5vw, 64px) !important;
+  font-weight: 800 !important;
+  color: #0a0a0a !important;
+  line-height: 1 !important;
   letter-spacing: 0.03em;
 }
 
 .hiw__h-red {
-  font-family: 'Coolvetica', sans-serif;
-  font-size: clamp(36px, 5vw, 64px);
-  font-weight: 900;
-  color: #8B0000;
+  font-family: 'Coolvetica', sans-serif !important;
+  font-size: clamp(42px, 5vw, 64px) !important;
+  font-weight: 800 !important;
+  color: #e00101 !important; /* Updated from #e00101 to match the other section's red */
+  line-height: 1 !important;
   letter-spacing: 0.03em;
 }
 
@@ -86,7 +95,7 @@
   position: absolute;
   left: 20px;
   width: 3px;
-  background: rgba(139, 0, 0, 0.2);
+  background: rgba(224, 1, 1, 0.2);
   /* top and height are dynamically managed by GSAP to perfectly span 01 to 06 */
 }
 
@@ -96,7 +105,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #8B0000;
+  background: #e00101;
   transform-origin: top;
   transform: scaleY(0);
 }
@@ -110,8 +119,8 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #8B0000;
-  box-shadow: 0 0 0 10px rgba(139, 0, 0, 0.15);
+  background: #e00101;
+  box-shadow: 0 0 0 10px rgba(224, 1, 1, 0.15);
   /* y is scrubbed by GSAP */
 }
 
@@ -141,7 +150,7 @@
   font-weight: 800;
   line-height: 0.75;
   letter-spacing: 5px;
-  color: #8B0000 !important;
+  color: #e00101 !important;
   min-width: 140px;
   text-align: right;
   flex-shrink: 0;
@@ -156,23 +165,23 @@
 }
 
 .hiw__step-title {
-  font-family: 'Coolvetica', sans-serif;
-  font-size: clamp(28px, 4vw, 85px);
-  font-weight: 900;
-  color: #0a0a0a;
+  font-family: 'Coolvetica', sans-serif !important;
+  font-size: 64px !important;
+  font-weight: 800 !important;
+  color: rgb(10, 10, 10) !important;
   letter-spacing: 0.04em;
-  line-height: 1;
+  line-height: 64px !important;
   text-transform: capitalize;
 }
 
-.hiw__step-sub {
-  font-family: 'Coolvetica', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
-  margin: 0;
-  line-height: 1.4;
-  letter-spacing: 0.03em;
+.services-page-container .hiw__step-sub {
+  font-family: 'Coolvetica', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.03em !important;
 }
 
 .hiw__step-body {
@@ -184,33 +193,132 @@
 }
 
 /* ── Responsive ─────────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hiw {
-    padding: 80px 20px 100px;
+    padding: 100px 20px 140px;
   }
 
-  .hiw__stage {
-    padding-left: 30px;
-  }
-
-  .hiw__rail {
-    left: 10px;
-  }
-
-  .hiw__steps {
-    gap: 100px;
-    /* slightly smaller gap on mobile */
-  }
-
-  .hiw__step {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  .hiw__header {
+    margin-bottom: 80px;
   }
 
   .hiw__num {
-    min-width: auto;
-    text-align: left;
-    font-size: clamp(80px, 18vw, 120px);
+    font-size: clamp(120px, 16vw, 180px);
+  }
+
+  .hiw__step-title {
+    font-size: clamp(36px, 5vw, 52px) !important;
+    line-height: 1.05 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hiw {
+    padding: 60px 16px 80px;
+  }
+
+  .hiw__header {
+    margin-bottom: 50px;
+  }
+
+  .hiw__h-black,
+  .hiw__h-red {
+    font-size: clamp(32px, 7.5vw, 44px) !important;
+  }
+
+  .hiw__intro-light {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  /* Stage: keep left rail padding so rail is visible */
+  .hiw__stage {
+    padding-left: 44px; /* Rail (20px from left) + some breathing room */
+    width: 100%;
+    margin: 0; /* Don't center stage, let content be left-rail guided */
+  }
+
+  /* Keep rail visible on mobile */
+  .hiw__rail {
+    display: block;
+    left: 14px;
+    width: 2px;
+  }
+
+  .hiw__steps {
+    gap: 36px;
+  }
+
+  .hiw__step {
+    flex-direction: row; /* Number LEFT, text RIGHT */
+    align-items: flex-start;
+    gap: 16px;
+    padding-left: 0;
+  }
+
+  /* Number: smaller, anchored left as accent */
+  .hiw__num {
+    font-size: clamp(52px, 13vw, 80px);
+    min-width: 60px;
+    flex-shrink: 0;
+    text-align: right;
+    line-height: 0.85;
+    margin-bottom: 0;
+    opacity: 0.9;
+  }
+
+  .hiw__step-text {
+    max-width: 100%;
+    flex: 1;
+    padding-top: 4px;
+    gap: 6px;
+  }
+
+  .hiw__step-title {
+    font-size: clamp(26px, 7vw, 38px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .services-page-container .hiw__step-sub {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+
+  .hiw__step-body {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #555;
+  }
+}
+
+@media (max-width: 480px) {
+  .hiw {
+    padding: 48px 14px 60px;
+  }
+
+  .hiw__header {
+    margin-bottom: 36px;
+  }
+
+  .hiw__h-black,
+  .hiw__h-red {
+    font-size: clamp(28px, 8.5vw, 38px) !important;
+  }
+
+  .hiw__steps {
+    gap: 44px;
+  }
+
+  .hiw__num {
+    font-size: clamp(60px, 18vw, 90px);
+  }
+
+  .hiw__step-title {
+    font-size: clamp(22px, 7.5vw, 32px) !important;
+  }
+
+  .hiw__step-body {
+    font-size: 13px;
   }
 }

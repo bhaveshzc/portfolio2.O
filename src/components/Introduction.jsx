@@ -94,7 +94,7 @@ export default function Introduction() {
                 <div className="profile-avatar-container square-avatar-ring">
                   <img
                     src="/profile.png"
-                    alt="Bhavesh Bisht"
+                    alt="Bhavesh"
                     className="profile-avatar-img square-avatar-img"
                     loading="eager"
                   />
@@ -121,7 +121,7 @@ export default function Introduction() {
                   </span>
                 </div>
                 <h1 className="profile-name">
-                  Bhavesh Bisht
+                  Bhavesh
                 </h1>
 
                 {/* Floating Tech Icons Marquee placed directly below Name */}
@@ -171,7 +171,7 @@ export default function Introduction() {
 
             {/* Card 1: My Journey (Left 50%) -> Navigates to /journey */}
             <Link to="/journey" className="luxury-glass-card mini-action-card card-journey">
-              <h3 className="script-title">My Journey</h3>
+              <h3 className="script-title" style={{ color: '#e00101' }}>My Journey</h3>
               <div className="card-action-bottom">
                 <div className="action-tag-group">
                   <span className="action-category-label">CREATOR</span>
@@ -212,7 +212,7 @@ export default function Introduction() {
               </div>
               <div className="profile-text-group">
                 <div className="profile-name-row">
-                  <span className="profile-name-badge">bhavesh</span>
+                  <span className="profile-name-badge">Bhavesh</span>
                   <span className="profile-verified-badge">✦</span>
                 </div>
                 <span className="profile-handle">@bhaveshzc</span>

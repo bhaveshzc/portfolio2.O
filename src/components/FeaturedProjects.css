@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   background-color: #0A0A0A;
-  color: #F5F5F5;
+  color: #c70d0d;
   padding: 100px 0;
   box-sizing: border-box;
   display: flex;
@@ -59,8 +59,8 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   color: #F5F5F5;
-  background: rgba(179, 0, 0, 0.15);
-  border: 1px solid rgba(179, 0, 0, 0.4);
+  background: rgba(224, 1, 1, 0.15);
+  border: 1px solid rgba(224, 1, 1, 0.4);
   border-radius: 999px;
   padding: 4px 14px;
   text-transform: uppercase;
@@ -86,7 +86,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 14.5px;
   font-weight: 600;
-  color: #B30000;
+  color: #e00101;
   margin: 0;
 }
 
@@ -119,7 +119,7 @@
 }
 
 .point-diamond {
-  color: #B30000;
+  color: #e00101;
   font-size: 13px;
   flex-shrink: 0;
 }
@@ -183,15 +183,15 @@
 
 .btn-primary {
   background: rgba(18, 18, 18, 0.9);
-  border: 1px solid #B30000;
+  border: 1px solid #e00101;
   color: #F5F5F5;
 }
 
 .btn-primary:hover {
-  background: #B30000;
-  border-color: #D41414;
+  background: #e00101;
+  border-color: #e00101;
   color: #FFFFFF;
-  box-shadow: 0 4px 20px rgba(179, 0, 0, 0.45);
+  box-shadow: 0 4px 20px rgba(224, 1, 1, 0.45);
 }
 
 .btn-primary:hover .btn-arrow {

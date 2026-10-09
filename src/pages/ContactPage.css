@@ -85,7 +85,7 @@
 
 .profile-verified-badge {
   font-size: 11px;
-  color: #D41414;
+  color: #e00101;
 }
 
 .profile-handle {
@@ -145,12 +145,12 @@
 .social-icon-bubble-btn:hover {
   background: #222222;
   border-color: rgba(255, 255, 255, 0.24);
-  color: #D41414;
+  color: #e00101;
   transform: translateY(-2px);
 }
 
 .social-icon-bubble-btn:hover svg {
-  color: #D41414;
+  color: #e00101;
   fill: currentColor;
 }
 
@@ -212,7 +212,7 @@
 }
 
 .capsule-ext-link:hover {
-  color: #D41414;
+  color: #e00101;
 }
 
 
@@ -333,7 +333,7 @@
 }
 
 .text-crimson-accent {
-  color: #D41414;
+  color: #e00101;
   font-weight: 400;
 }
 
@@ -354,7 +354,7 @@
 }
 
 .conversation-input-box:focus-within {
-  border-color: #D41414;
+  border-color: #e00101;
   background: #1C1C1C;
 }
 
@@ -365,8 +365,8 @@
   background: transparent;
   border: none;
   padding: 14px 18px;
-  color: #D41414;
-  caret-color: #D41414;
+  color: #e00101;
+  caret-color: #e00101;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -385,9 +385,9 @@
 .conversation-input-box input:-webkit-autofill:focus, 
 .conversation-input-box input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #181818 inset !important;
-  -webkit-text-fill-color: #D41414 !important;
+  -webkit-text-fill-color: #e00101 !important;
   transition: background-color 5000s ease-in-out 0s;
-  caret-color: #D41414;
+  caret-color: #e00101;
 }
 
 .conversation-input-box:focus-within input:-webkit-autofill,
@@ -408,7 +408,7 @@
 .field-error-text {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
-  color: #D41414;
+  color: #e00101;
   margin-top: -8px;
   margin-bottom: 2px;
   padding-left: 4px;
@@ -568,7 +568,7 @@
 
 .contact-toast--error {
   background: rgba(30, 10, 10, 0.92);
-  border-color: rgba(212, 20, 20, 0.4);
+  border-color: rgba(224, 1, 1, 0.4);
   color: #ffd4d4;
 }
 
@@ -579,7 +579,7 @@
 }
 
 .contact-toast--success .contact-toast__icon { color: #22C55E; }
-.contact-toast--error   .contact-toast__icon { color: #D41414; }
+.contact-toast--error   .contact-toast__icon { color: #e00101; }
 
 .contact-toast__msg {
   flex: 1;

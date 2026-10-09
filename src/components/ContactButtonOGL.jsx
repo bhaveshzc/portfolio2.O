@@ -40,7 +40,7 @@ void main() {
     float wave2 = cos(p.y * 4.2 - t * 0.8) * 0.5 + 0.5;
     float ribbon = smoothstep(0.2, 0.85, wave1 * wave2);
     
-    // Black Luxury (#0A0A0A) + Deep Crimson (#B30000) & Bright Red (#D41414)
+    // Black Luxury (#0A0A0A) + Deep Crimson (#e00101) & Bright Red (#e00101)
     vec3 colObsidian = vec3(0.06, 0.06, 0.07);
     vec3 colCrimson = vec3(0.72, 0.0, 0.0);
     vec3 colBright = vec3(0.96, 0.08, 0.08);

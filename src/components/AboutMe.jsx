@@ -69,7 +69,7 @@ export default function AboutMe() {
               That interest eventually turned into direction. I completed my <strong>Bachelor of Computer Applications</strong> to build a proper base in programming, and from there I kept learning — one language at a time — until I could take an idea and turn it into a working website on my own.
             </p>
             <p className="about-card-body">
-              I'm <strong>Bhavesh Bisht</strong>, a full stack developer who builds, designs, and updates websites. I help turn whatever you're working with right now into something better.
+              I'm <strong>Bhavesh</strong>, a full stack developer who builds, designs, and updates websites. I help turn whatever you're working with right now into something better.
             </p>
 
 
@@ -80,7 +80,7 @@ export default function AboutMe() {
             <div className="about-profile-frame">
               <img
                 src="/profile.png"
-                alt="Bhavesh Bisht – Full Stack Developer"
+                alt="Bhavesh – Full Stack Developer"
                 className="about-profile-img"
                 loading="lazy"
                 decoding="async"

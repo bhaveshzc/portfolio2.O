@@ -10,7 +10,7 @@ const experiences = [
     organization: "The Flat Factory",
     location: "Remote",
     logo: flatFactoryLogo,
-    logoShape: "rect",
+    logoShape: "square",
     logoAlt: "The Flat Factory Logo",
     url: null,
     description:
@@ -47,12 +47,6 @@ export default function Experience() {
           {experiences.map((item, idx) => (
             <div key={idx} className="timeline-node-item">
               
-              {/* Left Indicator & Period */}
-              <div className="timeline-marker-col">
-                <div className="timeline-dot-crimson" />
-                <div className="timeline-line-stem" />
-              </div>
-
               {/* Right Card Content */}
               <div className="luxury-glass-card timeline-card-content">
                 <div className="timeline-card-header">
@@ -104,8 +98,6 @@ export default function Experience() {
           
           {/* Bottom Cards (Aligned with timeline cards) */}
           <div className="timeline-node-item bottom-boxes-wrapper">
-            {/* Empty marker column to push cards to the exact same left alignment as timeline cards */}
-            <div className="timeline-marker-col"></div>
             
             <div className="experience-bottom-cards">
               {/* Rectangular Card: Let's Work Together */}

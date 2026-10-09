@@ -106,29 +106,29 @@
 }
 
 /* =========================================================================
-   WHITE BACKGROUND PAGES THEME (Buttons and Logo in Red #D41414)
+   WHITE BACKGROUND PAGES THEME (Buttons and Logo in Red #e00101)
    ========================================================================= */
 .navbar-dark-theme .logo {
-  color: #D41414;
+  color: #e00101;
 }
 
 .navbar-dark-theme .nav-center a {
-  color: #D41414;
+  color: #e00101;
   opacity: 0.9;
 }
 
 .navbar-dark-theme .nav-center a::after {
-  background: #D41414;
+  background: #e00101;
 }
 
 .navbar-dark-theme .nav-center a:hover,
 .navbar-dark-theme .nav-center a.active-link {
-  color: #B30000;
+  color: #e00101;
   opacity: 1;
 }
 
 .navbar-dark-theme .nav-center a.active-link::after {
-  background: #B30000;
+  background: #e00101;
 }
 
 /* ==============================

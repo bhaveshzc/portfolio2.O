@@ -3,7 +3,7 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import "./OriginCalendar.css";
 
 export default function OriginCalendar({
-  calUsername = import.meta.env.VITE_CAL_USERNAME || "bhaveshbisht",
+  calUsername = import.meta.env.VITE_CAL_USERNAME || "Biztxclebisht",
   calEventSlug30m = import.meta.env.VITE_CAL_EVENT_SLUG_30M || "30min"
 }) {
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function OriginCalendar({
         hideEventTypeDetails: false,
         layout: "month_view",
         styles: {
-          branding: { brandColor: "#D41414" },
+          branding: { brandColor: "#e00101" },
         },
       });
     })();

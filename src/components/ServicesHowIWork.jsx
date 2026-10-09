@@ -144,7 +144,10 @@ export default function ServicesHowIWork() {
 
         {/* Header Block - Left Aligned */}
         <div className="hiw__header">
-          <span className="hiw__label">04 / HOW I WORK</span>
+          <div className="hiw__label">
+            <span className="label-num">04 / </span>
+            <span className="label-text">HOW I WORK</span>
+          </div>
           <h2 className="hiw__headline">
             <span className="hiw__h-black">No random code.</span>
             <span className="hiw__h-red">Every step has a job.</span>

@@ -1,5 +1,5 @@
 /* =========================================================================
-   CONTACT SECTION (Homepage - Header Only Version)
+   CONTACT SECTION (Attached seamlessly to Footer)
    ========================================================================= */
 
 .contact-luxury-section {
@@ -7,7 +7,7 @@
   width: 100%;
   background-color: #0A0A0A;
   color: #F5F5F5;
-  padding: 80px 0 60px;
+  padding: 80px 0 0px; /* Shifted down, attached directly to footer */
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -24,82 +24,116 @@
   gap: 32px;
 }
 
-/* ── Section Header ── */
-.section-header-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
+/* ── 3 Column Row ── */
+.contact-three-col-row {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1fr; /* Middle box is bigger */
+  gap: 24px;
+  width: 100%;
 }
 
-.section-micro-tag {
-  font-family: 'Inter', sans-serif;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: #9A9A9A;
-  text-transform: uppercase;
+.contact-small-card {
+  min-height: 160px !important;
+  padding: 26px 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; /* Vertically center */
+  align-items: flex-start !important; /* Horizontally left-align */
+  text-align: left !important;
 }
 
-.section-script-subtitle {
-  font-family: "soulstice-brush-script-demo", "Alex Brush", "Dancing Script", cursive;
-  font-size: clamp(38px, 4vw, 56px);
-  font-weight: 400;
-  color: #D41414;
-  line-height: 1.1;
-  margin: 0;
-  letter-spacing: 0.02em;
+.contact-script-title {
+  margin: 0 !important;
+  font-family: "soulstice-brush-script-demo", "Alex Brush", "Dancing Script", "Cormorant Garamond", cursive, serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: clamp(28px, 2.8vw, 40px) !important;
+  line-height: 1.15 !important;
+  color: #e00101 !important;
+  text-align: left !important;
+  align-self: flex-start !important;
+  width: 100%;
 }
 
-.section-main-heading {
-  font-family: 'Syne', 'Inter', sans-serif;
-  font-size: clamp(26px, 3.2vw, 40px);
-  font-weight: 700;
-  color: #F5F5F5;
-  margin: 0;
-  letter-spacing: -0.02em;
+.contact-gradient-title {
+  margin: 0 !important;
+  font-size: clamp(26px, 2.6vw, 38px) !important;
+  text-align: left !important;
+  align-self: flex-start !important;
+  width: 100%;
 }
 
-/* ── Contact CTA Pill ── */
-.contact-cta-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #D41414;
-  border: none;
-  border-radius: 999px;
-  padding: 12px 28px;
-  color: #000000;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  margin-top: 8px;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.contact-cta-pill:hover {
-  background: #b50000;
-  transform: translateY(-2px);
-}
 
 /* ── Responsive ── */
+@media (max-width: 1024px) {
+  .contact-three-col-row {
+    grid-template-columns: 1fr 1.6fr 1fr; /* Keep same as PC */
+    gap: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-luxury-section {
-    padding: 50px 0 40px;
+    padding: 60px 0 0px;
   }
 
   .contact-luxury-container {
-    padding: 0 16px;
+    padding: 0 14px;
+    gap: 20px;
+  }
+
+  /* Keep 3 columns exactly like PC — just tighten gap and font */
+  .contact-three-col-row {
+    grid-template-columns: 1fr 1.6fr 1fr;
+    gap: 10px;
+  }
+
+  .contact-small-card {
+    min-height: 125px !important;
+    padding: 18px 16px !important;
+  }
+
+  .contact-script-title {
+    font-size: clamp(17px, 3.8vw, 24px) !important;
+    text-align: left !important;
+    align-self: flex-start !important;
+  }
+
+  .contact-gradient-title {
+    font-size: clamp(15px, 3.5vw, 22px) !important;
+    text-align: left !important;
+    align-self: flex-start !important;
   }
 }
 
 @media (max-width: 480px) {
+  .contact-luxury-section {
+    padding: 40px 0 0px;
+  }
+
+  .contact-three-col-row {
+    grid-template-columns: 1fr 1.6fr 1fr; /* Still same 3-col ratio */
+    gap: 8px;
+  }
+
+  .contact-small-card {
+    min-height: 110px !important;
+    padding: 14px 12px !important;
+  }
+
   .contact-luxury-container {
-    padding: 0 12px;
+    padding: 0 10px;
+  }
+
+  .contact-script-title {
+    font-size: clamp(14px, 3.6vw, 19px) !important;
+    text-align: left !important;
+    align-self: flex-start !important;
+  }
+
+  .contact-gradient-title {
+    font-size: clamp(12px, 3.2vw, 17px) !important;
+    text-align: left !important;
+    align-self: flex-start !important;
   }
 }

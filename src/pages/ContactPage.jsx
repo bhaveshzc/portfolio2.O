@@ -137,11 +137,11 @@ export default function ContactPage() {
           {/* Left Capsule: Profile Badge */}
           <div className="profile-identity-pill">
             <div className="profile-avatar-box">
-              <img src="/profile.png" alt="Bhavesh" className="profile-img-thumb" />
+              <img src="/profile.png" alt="Biztxcle" className="profile-img-thumb" />
             </div>
             <div className="profile-text-group">
               <div className="profile-name-row">
-                <span className="profile-name">bhavesh</span>
+                <span className="profile-name">Biztxcle</span>
                 <span className="profile-verified-badge">✦</span>
               </div>
               <span className="profile-handle">@bhaveshzc</span>

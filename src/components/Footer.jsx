@@ -57,11 +57,11 @@ export default function Footer() {
           {/* Profile identity pill */}
           <div className="footer-profile-pill">
             <div className="footer-avatar-box">
-              <img src="/profile.png" alt="Bhavesh" className="footer-avatar-img" />
+              <img src="/profile.png" alt="Biztxcle" className="footer-avatar-img" />
             </div>
             <div className="footer-profile-text">
               <div className="footer-name-row">
-                <span className="footer-profile-name">bhavesh</span>
+                <span className="footer-profile-name">Biztxcle</span>
                 <span className="footer-verified">✦</span>
               </div>
               <span className="footer-handle">@bhaveshzc</span>
@@ -143,7 +143,7 @@ export default function Footer() {
         {/* ── Row 4: Copyright ── */}
         <div className="footer-copyright-row">
           <p className="footer-copyright">
-            © {new Date().getFullYear()} Bhavesh Bisht. Crafted with precision &amp; scalability.
+            © {new Date().getFullYear()} Biztxcle. Crafted with precision &amp; scalability.
           </p>
         </div>
 

@@ -24,16 +24,16 @@ const defaultNavItems = [
 const CustomFooter = () => {
   return (
     <div className="flex w-full text-sm justify-between text-[#F5F5F5] px-10 md:px-24 py-5 border-t border-white/10">
-      <a href="https://www.linkedin.com/in/bhavesh-bisht-99142a383/" target="_blank" rel="noopener noreferrer" className="hover:text-[#D41414] transition-colors">
+      <a href="https://www.linkedin.com/in/bhavesh-bisht-99142a383/" target="_blank" rel="noopener noreferrer" className="hover:text-[#e00101] transition-colors">
         <FaLinkedinIn size={24} />
       </a>
-      <a href="https://github.com/bhaveshzc" target="_blank" rel="noopener noreferrer" className="hover:text-[#D41414] transition-colors">
+      <a href="https://github.com/bhaveshzc" target="_blank" rel="noopener noreferrer" className="hover:text-[#e00101] transition-colors">
         <FaGithub size={24} />
       </a>
-      <a href="https://www.instagram.com/biztxcle/?__d=1%2FHolzbau%2BPiotrowicz" target="_blank" rel="noopener noreferrer" className="hover:text-[#D41414] transition-colors">
+      <a href="https://www.instagram.com/biztxcle/?__d=1%2FHolzbau%2BPiotrowicz" target="_blank" rel="noopener noreferrer" className="hover:text-[#e00101] transition-colors">
         <FaInstagram size={24} />
       </a>
-      <a href="https://t.me/+916398854475" target="_blank" rel="noopener noreferrer" className="hover:text-[#D41414] transition-colors">
+      <a href="https://t.me/+916398854475" target="_blank" rel="noopener noreferrer" className="hover:text-[#e00101] transition-colors">
         <FaTelegramPlane size={24} />
       </a>
     </div>
@@ -67,8 +67,8 @@ const NavLink = ({ heading, href, setIsActive }) => {
           className={`relative z-10 block text-4xl md:text-5xl font-extralight transition-colors duration-300 ${
             location.pathname === href ||
             ((href === "/services" || href === "/#services") && (location.pathname === "/services" || location.hash === "#services"))
-              ? "text-[#D41414]"
-              : "text-[#F5F5F5] group-hover:text-[#D41414]"
+              ? "text-[#e00101]"
+              : "text-[#F5F5F5] group-hover:text-[#e00101]"
           }`}
         >
           {heading}
@@ -187,7 +187,7 @@ export default function CurvedMenu({ navItems = defaultNavItems, footer = <Custo
 
   const iconColor = isActive
     ? "text-white"
-    : (isDarkPage ? "text-[#D41414]" : "text-black");
+    : (isDarkPage ? "text-[#e00101]" : "text-black");
 
   return (
     <>
@@ -216,11 +216,23 @@ export default function CurvedMenu({ navItems = defaultNavItems, footer = <Custo
 
       <AnimatePresence mode="wait">
         {isActive && (
-          <CurvedNavbar
-            setIsActive={setIsActive}
-            navItems={navItems}
-            footer={footer}
-          />
+          <>
+            {/* Backdrop — clicking outside closes the menu */}
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setIsActive(false)}
+              className="fixed inset-0 z-[104] bg-black/40"
+            />
+            <CurvedNavbar
+              setIsActive={setIsActive}
+              navItems={navItems}
+              footer={footer}
+            />
+          </>
         )}
       </AnimatePresence>
     </>

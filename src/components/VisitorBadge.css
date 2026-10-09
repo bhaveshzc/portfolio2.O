@@ -32,10 +32,10 @@
 }
 
 .luxury-visitor-pill:hover {
-  border-color: rgba(179, 0, 0, 0.6);
+  border-color: rgba(224, 1, 1, 0.6);
   background: rgba(28, 28, 28, 0.9);
   color: #F5F5F5;
-  box-shadow: 0 0 20px rgba(179, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(224, 1, 1, 0.3);
 }
 
 .visitor-pill-text {
@@ -54,7 +54,7 @@
 .visitor-ordinal-sup {
   font-size: 0.72em;
   font-weight: 600;
-  color: #B30000;
+  color: #e00101;
   margin-left: 1px;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .luxury-visitor-pill:hover .visitor-refresh-icon {
-  color: #D41414;
+  color: #e00101;
 }
 
 .visitor-refresh-icon.is-spinning {

@@ -68,7 +68,8 @@ export default function ServicesWhatIDo() {
           variants={fadeUp}
         >
           <div className="what-i-do__label-left">
-            02 / WHAT I DO
+            <span className="label-num">02 / </span>
+            <span className="label-text">WHAT I DO</span>
           </div>
           <div className="what-i-do__label-right">
             Web Development & Digital Products
@@ -86,9 +87,9 @@ export default function ServicesWhatIDo() {
           {/* Text Area */}
           <div className="what-i-do__text-area">
             <motion.h2 className="what-i-do__headline" variants={fadeUp}>
-              <span className="what-i-do__headline-line">not just code.</span>
+              <span className="what-i-do__headline-line">Not just code.</span>
               <span className="what-i-do__headline-line">
-                the <span className="what-i-do__highlight">whole</span> product.
+                The <span className="what-i-do__highlight">whole</span> product.
               </span>
             </motion.h2>
 

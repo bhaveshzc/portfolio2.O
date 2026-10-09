@@ -50,12 +50,12 @@
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  background: rgba(179, 0, 0, 0.12);
-  border: 1px solid rgba(179, 0, 0, 0.3);
+  background: rgba(224, 1, 1, 0.12);
+  border: 1px solid rgba(224, 1, 1, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #B30000;
+  color: #e00101;
   flex-shrink: 0;
 }
 
@@ -96,11 +96,11 @@
 }
 
 .skill-item-pill:hover {
-  background: rgba(179, 0, 0, 0.14);
-  border-color: #B30000;
+  background: rgba(224, 1, 1, 0.14);
+  border-color: #e00101;
   transform: translateY(-2px);
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(179, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(224, 1, 1, 0.25);
 }
 
 @media (max-width: 900px) {

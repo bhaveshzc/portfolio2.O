@@ -103,7 +103,200 @@
   box-sizing: border-box;
 }
 
-.services-page-container,
-.services-page-container * {
+.services-page-container {
+  font-family: 'Coolvetica', sans-serif;
+}
+
+.services-page-container h1,
+.services-page-container .services-hero__headline {
   font-family: 'Coolvetica', sans-serif !important;
 }
+
+.services-page-container h4,
+.services-page-container h5,
+.services-page-container h6,
+.services-page-container .services-hero__philosophy-label {
+  font-family: "Times New Roman", serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  color: rgb(0, 0, 0) !important;
+  font-size: 16px !important;
+  line-height: normal !important;
+}
+
+.services-page-container p,
+.services-page-container li {
+  font-family: 'Inter', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  color: rgb(0, 0, 0) !important;
+  font-size: 16px !important;
+  line-height: 27px !important;
+}
+
+/* =========================================================================
+   PROJECTS PAGE (Luxury Dark Theme matching Coverflow Reference)
+   ========================================================================= */
+.projects-page-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  padding-top: 110px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .projects-page-container {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+}
+
+/* =========================================================================
+   CAROUSEL POSITION & Y-OFFSET CONTROL
+   ========================================================================= */
+.carousel-stage-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  /* 👇 CHANGE THIS VALUE TO SHIFT CAROUSEL UP OR DOWN 👇 */
+  margin-top: 50px;     /* Shifted down with comfortable gap below heading */
+  margin-bottom: 30px;  /* Spacing between carousel and project details below */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .carousel-stage-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* =========================================================================
+   PROJECT ACTION BUTTONS & STATUS (Centered Pill Group)
+   ========================================================================= */
+.project-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered in middle of page */
+  width: 100%;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.project-btns-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Segmented Pill for Website + Code ── */
+.project-segmented-pill {
+  display: inline-flex;
+  align-items: center;
+  background: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 3px 5px;
+  gap: 2px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.project-segment-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: transparent;
+  color: #d4d4d8;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  user-select: none;
+}
+
+.project-segment-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+  transform: translateY(-0.5px);
+}
+
+.project-segment-btn:active {
+  transform: translateY(0.5px);
+}
+
+/* ── Share Pill ── */
+.project-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d4d4d8;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  user-select: none;
+}
+
+.project-share-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-0.5px);
+}
+
+.project-share-btn:active {
+  transform: translateY(0.5px);
+}
+
+/* ── Grey Metallic Text Shine Animation (Slow & Elegant) ── */
+.grey-shine-text {
+  background: linear-gradient(
+    110deg,
+    #9ca3af 20%,
+    #e4e4e7 45%,
+    #ffffff 50%,
+    #e4e4e7 55%,
+    #9ca3af 80%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: grey-shine-sweep 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
+
+@keyframes grey-shine-sweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -80% 0;
+  }
+}
+
+
+
+
+

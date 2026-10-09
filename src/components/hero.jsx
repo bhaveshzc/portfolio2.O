@@ -179,7 +179,7 @@ function Hero() {
         >
           <img
             src="/profile.png"
-            alt="Bhavesh"
+            alt="Biztxcle"
             fetchPriority="high"
             loading="eager"
             decoding="async"

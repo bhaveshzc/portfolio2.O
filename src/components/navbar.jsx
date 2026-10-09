@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import CurvedMenu from "./ui/CurvedMenu";
 import SpecularButton from "./SpecularButton";
+import Magnet from "./Magnet";
 import "./navbar.css";
 
 const navItems = [
@@ -26,9 +27,11 @@ export default function Navbar() {
         <nav className="navbar">
           {/* Left: Logo / Name */}
           <div className="nav-left">
-            <Link to="/" className="logo">
-              Bhavesh Bisht
-            </Link>
+            <Magnet padding={50} disabled={false} magnetStrength={3}>
+              <Link to="/" className="logo">
+                Biztxcle
+              </Link>
+            </Magnet>
           </div>
 
           {/* Center: Navigation links in the middle */}
@@ -54,8 +57,8 @@ export default function Navbar() {
               size="sm"
               radius={18}
               autoAnimate={false}
-              textColor={isWhiteBgPage ? "#D41414" : "#f5f5f5"}
-              lineColor={isWhiteBgPage ? "#D41414" : "#ffffff"}
+              textColor={isWhiteBgPage ? "#e00101" : "#f5f5f5"}
+              lineColor={isWhiteBgPage ? "#e00101" : "#ffffff"}
             >
               Contact
             </SpecularButton>
